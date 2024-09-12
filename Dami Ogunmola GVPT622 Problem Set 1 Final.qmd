@@ -1,0 +1,206 @@
+---
+title: "Ogunmola Project Set 1 Quarto"
+author: "Dami Ogunmola"
+format: html
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+## **Question 1**
+
+Prior to the 2020 US Presidential Election, the ANES asked respondents what the highest level of school they completed or the highest degree they received.
+
+### **Part A**
+
+*Points: 2*
+
+What was the most common highest level of education obtained by respondents? What was the least common? *Use the `education` variable from the `nes` data set to answer these questions.*
+
+The most common highest level of education obtained by respondents was “some post-high school, no bachelor’s degree”. The least common level of education obtained by respondents was “less than high school credential”.
+
+``` r
+ggplot(nes, aes(y = education)) + 
+    geom_bar() +
+    theme_minimal() + 
+    theme(plot.title = element_text(face = "bold"),
+          plot.title.position = "plot") + 
+    labs(
+        title = "What is the highest level of school you have completed or the highest degree you have received?", 
+        x = "Count of respondents",
+        y = NULL,
+        caption = "Source: ANES 2020 Survey"
+    ) + 
+    scale_x_continuous(labels = scales::label_comma())
+```
+
+![](images/clipboard-2306507714.png)
+
+### **Part B**
+
+*Points: 2*
+
+Describe the distribution of the total number of respondents that obtained each highest level of education. Include a plot of those counts.
+
+The most common response was “some post-high school, no bachelor’s degree”. Specifically, 2,790 respondents or 33.69% of respondents answered that they completed “some post-high school \[education\], \[but\] no bachelor’s degree”. The second most common response was “bachelor’s degree”. 2,055 respondents or 24.81% of respondents answered that they completed a bachelor’s degree. The third most common response was completion of a “graduate degree”. 1,592 respondents or 19.22% of respondents answered that they received a “graduate degree”.
+
+The fourth most common response was “high school credential”. 1,336 respondents or 16.13% of respondents answered that they received a “ High school credential”. The least common response was “Less than a high school credential”. Specifically, 376 respondents or 4.54% of respondents answered that they received “Less than a high school credential”.
+
+``` r
+tabyl(nes, education)
+```
+
+## **Question 2**
+
+The ANES also asked each respondent how often they pay attention to what is going on in government and politics. Let’s use these responses to learn more about how much attention US voters pay to politics ahead of a Presidential election.
+
+### **Part A**
+
+*Points: 2*
+
+How often did individuals pay attention to what was going on in government and politics? What was the most popular level of attention? What was the least? *Use the `attention_to_politics` variable from the `nes` data set to answer these questions.*
+
+Individuals paid attention to what was going on in government and politics quite regularly. Specifically, the most popular level of attention paid to politics was “most of the time”. The least popular level of attention paid to politics was “never”.
+
+``` r
+ggplot(nes, aes(y = attention_to_politics)) + 
+    geom_bar() +
+    theme_minimal() + 
+    theme(plot.title = element_text(face = "bold"),
+          plot.title.position = "plot") + 
+    labs(
+        title = "How often do you pay attention to what’s going on in government and politics?", 
+        x = "Count of respondents",
+        y = NULL,
+        caption = "Source: ANES 2020 Survey"
+    ) + 
+    scale_x_continuous(labels = scales::label_comma())
+```
+
+### **Part B**
+
+*Points: 3*
+
+Describe the distribution of the total number of respondents who provided each answer to this question. Does this distribution indicate that individuals tend to pay very little, a moderate, or a lot of attention to politics prior to a US Presidential Election? Include a plot of these counts in your answer.
+
+1,942 respondents or 23.45% of respondents responded that they “always” paid attention to politics. 3,313 respondents or 40.01% of respondents responded that they pay attention to politics “most of the time”. 1,587 respondents or 19.16% of respondents responded that they pay attention to politics “about half the time”. 1,360 respondents or 16.42% of respondents answered that they pay attention to politics “some of the time”. 77 respondents or 0.9% of respondents answered that they never pay attention to politics. This distribution indicates that individuals pay a lot of attention to politics.
+
+\[I used the code listed under question 2 to produce the bar graph below and the code below to find the specific counts and percentages.\]
+
+``` r
+tabyl(nes, attention_to_politics)
+```
+
+![](images/clipboard-1604503133.png)
+
+## **Question 3**
+
+Examine the following vector of (fake) student IQ test scores:
+
+```         
+iq <- c(
+  145, 139, 126, 122, 125, 130, 96, 110, 118, 118, 101, 142, 134, 124, 112, 109, 
+  134, 113, 81, 113, 123, 94, 100, 136, 109, 131, 117, 110, 127, 124, 106, 124, 
+  115, 133, 116, 102, 127, 117, 109, 137, 117, 90, 103, 114, 139, 101, 122, 105, 
+  97, 89, 102, 108, 110, 128, 114, 112, 114, 102, 82, 101
+)
+```
+
+### **Part A**
+
+*Points: 3*
+
+Find the five-number summary, mean, and standard deviation for these data. Do you think any of these students might be outliers in this distribution? If so, what IQ test score did they get and how do you know?
+
+``` r
+fivenum(iq)
+mean(iq)
+sd(iq)
+```
+
+The five number summary of the above IQ data set is 81.0, 104.0, 114.0, 125.5, and 145.0. This means that the minimum value is 81, the first quartile is at 104, the median is 114, the third quartile is 125.5, and the maximum value is 145. The mean is 114.9833, and the standard deviation is 14.80093. I do not think there are outliers. I know this because I used the outlier equation to calculate 1.5 times the interquartile range (125.5-104). I then added this amount to the third quartile and subtracted this amount from the first quartile, determining outliers would be lower than 71.75 and higher than 157.75. As there are no IQ scores less than 71.75 and greater than 157.75, there are no outliers.
+
+### **Part B**
+
+*Points: 3*
+
+In large populations, IQ test scores are standardized to have a mean of 100 and a standard deviation of 15. In what way does the distribution among these students differ from the overall population? Do not use the words and phrases “mean” or “standard deviation” in your answer.
+
+The distribution among students from the iq data set differs from the overall population as the center point or middle value of the iq data set is higher than that of the population’s center point. This suggests that, on average, the respondents in the iq data set had a higher IQ score than those in the general population. However, the higher average IQ score could be because the iq data set sample is smaller than the size of the population. The distribution of IQ test scores in the data set differ from IQ scores from the general population as the scores from the data set are slightly less spread out than the scores of the general population's.
+
+## **Question 4**
+
+*Points: 4*
+
+The ANES collects information about each respondent’s demographics, including their race, age, household income, and party affiliation. Provide the “type” (categorical or continuous) of variable each of those demographic characteristics represents.
+
+Race is a categorical variable, age is a continuous variable, household income is a continuous variable, and party affiliation is a categorical variable.
+
+## **Question 5**
+
+The ANES also asked respondents prior to the election to rate Joe Biden and Donald Trump on a scale from 0 to 100.
+
+### **Part A**
+
+*Points: 3*
+
+Plot all respondents’ answers to these two questions on a single density plot. There are several peaks in these distributions. What do these peaks have in common? What might they suggest about how people answer questions that ask them to provide a single number along a large range?
+
+The first peak for both plots is at 0, suggesting that some respondents felt quite negatively about both candidates. Additionally, both plots feature peaks around 85. In addition to positive sentiments, this suggests that, even when asked to provide a single number along a large range, respondents tend to respond with very low numbers or higher numbers (like numbers clustered around 60-85 for example). Respondents do not tend to give low or "low-middle" number ratings (between 20-40).
+
+``` r
+ggplot(nes, aes(x = therm_biden)) + 
+    geom_density() +
+    theme_minimal() + 
+    theme(plot.title = element_text(face = "bold"),
+          plot.title.position = "plot") + 
+    labs(
+        title = "On a scale from 0 to 100, how would you rate Joe Biden?", 
+        x = "Feeling Thermometer",
+        y = "Density",
+        caption = "Source: ANES 2020 Survey"
+    ) + 
+    scale_x_continuous(labels = scales::label_comma())
+ggplot(nes, aes(x = therm_trump)) + 
+    geom_density() +
+    theme_minimal() + 
+    theme(plot.title = element_text(face = "bold"),
+          plot.title.position = "plot") + 
+    labs(
+        title = "On a scale from 0 to 100, how would you rate Donald Trump?", 
+        x = "Feeling Thermometer",
+        y = "Density",
+        caption = "Source: ANES 2020 Survey"
+    ) + 
+    scale_x_continuous(labels = scales::label_comma())
+```
+
+![](images/clipboard-1187264418.png)
+
+![](images/clipboard-2267948216.png)
+
+### **Part B**
+
+*Points: 3*
+
+President Biden won this election. Would you predict this outcome from the way this representative sample responded to these questions? Provide a brief description of the reasoning behind your answer.
+
+Based on how the sample responded to questions, I think it would be hard to certainly predict Biden would have won the election, but I do think the data slightly favors him. Out of all ratings of Joe Biden, the most frequent rating was 0. Specifically, around 20% of respondents rated Joe Biden a 0. The next two most frequently selected ratings were 85 (14.19%) and 70 (11.69%). Though these are high ratings, they were ultimately selected at a lower rate than 0. Additionally, Trump’s ratings make the results a little less certain. For example, a large portion of survey respondents rated Trump a 0. Specifically, 3,189 respondents or 39.62% of respondents rated Trump a 0, outpacing the number of 0 ratings Biden received. This would seem to clearly suggest that Biden would likely win; however, the second most frequent rating Trump received was 100. Specifically, 1,212 respondents or 15.05% of respondents rated him a 100, followed by 10.73% of respondents rating Trump an 85. This suggests that Trump elicits strong feelings from supporters and critics alike. Thus, it would be hard to certainly predict which of the two camps would be most likely to vote. Ultimately, given the high percentage of 0 ratings for Trump, I would have predicted that Biden was likely to win.
