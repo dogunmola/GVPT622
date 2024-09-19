@@ -19,11 +19,31 @@ Please upload your completed assignment to the ELMs course site (under the assig
 
 *Points: 10*
 
+::: callout-note
+7/10
+:::
+
 **Suppose I want to examine the hypothesis that consuming political news coverage from cable network channels (e.g., CNN, MSNBC, Fox News, etc.) causes citizens to have less trust in government than if they were to consume it from mainstream print media (e.g., New York Times, Wall Street Journal, etc.). What is more, suppose that I believe that this effect is greatest among "young" citizens. Design the contours of an experiment to test this proposition (and be sure to sketch the key elements of the experimental design). Second, briefly describe any significant shortcomings that the experimental design might have.**
 
-In this experiment, the independent variable of interest is the consumption of political news from cable network channels. The dependent variable is a citizen’s trust in government. I would recruit participants through leaving posters on university campuses, in post offices, and in community centers. I would also send out emails, offering small financial incentives to encourage people to sign up. After assembling a random sample representative of the general population, I would employ a stratified design, dividing participants into groups based on their age (18-30, 31-43, 44-56…). I would then randomly assign participants in each group to one of two groups, the treatment or the control group.
+In this experiment, the independent variable of interest is the consumption of political news from cable network channels.
+
+::: callout-note
+Also, age.
+:::
+
+The dependent variable is a citizen’s trust in government. I would recruit participants through leaving posters on university campuses, in post offices, and in community centers. I would also send out emails, offering small financial incentives to encourage people to sign up. After assembling a random sample representative of the general population, I would employ a stratified design, dividing participants into groups based on their age (18-30, 31-43, 44-56…).
+
+::: callout-note
+This would not be a random sample (but few truly are).
+:::
+
+I would then randomly assign participants in each group to one of two groups, the treatment or the control group.
 
 Participants in the experimental treatment group would watch cable news for two hours daily for one month straight (in their own homes). The participants would be told to alternate watching Fox News one day, then CNN the next day. The control group would instead read mainstream print media for two hours daily for one month straight, with every participant alternating daily between reading the New York Times and the Wall Street Journal, to control for potential effects of the partisan skew of the political news source, ensuring that the results of the experiment (a citizen's level of distrust in government) are not a result of participants reading left-leaning or right-leaning sources.
+
+::: callout-note
+Your control group is being treated. You should have three groups: two treatment groups (cable news and print media) and one control (that just does as they would otherwise have done).
+:::
 
 After one month, I would send a survey to the experiment participants. To gauge a participant’s trust in the government, I would use Likert scales and ask participants to rate the extent they agree with statements like the following: “I believe the government has my best interest at heart”, “I believe that government processes are fair and transparent”. I would also include a feeling thermometer, asking participants to rate their degree of trust in the government on a scale from 0 to 100. 
 
@@ -35,36 +55,73 @@ One potential shortcoming of the experiment is operationalizing the dependent va
 
 *Points: 10*
 
+::: callout-note
+7.5/10
+:::
+
 Below are four hypothetical research designs to determine the effects of democratic governance on the funding of educational institutions. Briefly evaluate each sampling design in terms of its: (1) sampling variability; and, (2) sources of potential bias.
 
 A.  **A sample of educational funding levels for every country in Europe for each of the last 100 years.**
 
     Considering the sample includes every European country, there would not be sampling variability.
 
+    ::: callout-note
+    Correct.
+    :::
+
     One potential source of bias is that Europe is largely democratic and is also relatively wealthier than other parts of the world. Thus, the prevalence of democratic states or wealthy states in Europe is not reflective of the actual distribution of democratic states or wealthy states in the world. Consequently, such a narrow sample would not be generalizable to the population, only allowing researchers to apply potential findings to European countries. If a researcher wanted to apply these results to the general population, there would be considerable bias as only European countries were selected for the sample.
 
     Another potential source of bias could arise from wealth and resource disparities in Europe. Specifically, Europe is home to Western and Northern European countries which are among some of the wealthiest countries in the world. Thus, they may have more resources to collect more up-to-date data, publishing such data in a publically accessible way. However, other countries in Europe who are lower income and have fewer resources may not keep up-to-date data on education expenditures due to the strain it would place on the government. Thus, considering differences in the availability of data, some countries (particulary wealthy countries) in Europe may be overrepresented in the sample while other countries (lower income countries) may be underrepresented or not represented at all.
 
-B.  **A sample of educational funding levels in five randomly picked countries drawn from the global population of countries for each of the last 10 years.**
+::: callout-note
+Correct.
+:::
+
+A.  **A sample of educational funding levels in five randomly picked countries drawn from the global population of countries for each of the last 10 years.**
 
     Sampling variability would likely be quite substantial considering there are 193 UN-recognized countries in the world. Furthermore, among the 193 countries in the world, there are considerable disparities in wealth, economic development, degree of democratization, government efficacy as well as differences in population size, population mean age, as well as laws relating to the years of required education, all factors which could potentially affect education funding levels. Thus, considering significant disparities and differences amongst countries, one random sample of 5 countries would likely vary greatly from another random sample of 5 countries.
 
+    ::: callout-note
+    Correct.
+    :::
+
 A potential source of bias could be a country's regime type and whether a country is at war. Specifically, authoritarian countries may have rather opaque political processes, making it difficult to find public data on education expenditures. Thus, due to ease of data collection, democratic countries may be more likely to be included in the sample, leading to selection bias. Furthermore, if a country is at war, it may not be possible for the government to collect widespread data on education expenditures, leading to significant gaps in the data. Thus, researchers may choose to exclude such countries, leading to selection bias in which countries not at war are more likely to be chosen.
+
+::: callout-note
+Incorrect. There is no bias because we select countries randomly.
+:::
 
 A.  **A survey of educational administrators that yields responses that allow for a comparison of educational funding levels in Russia and the United States for the six-year period from 2010 to 2015.**
 
     As there are hundreds of thousands of educational administrators in the U.S. and Russia employed at a range of different educational institutions in the U.S. and Russia, sampling variability would likely be quite high. Furthermore, considering disparities in educational funding depending on the state and neighborhood a school is located in,depending on who is sent the survey and who responds, the responses regarding levels of funding could differ greatly.
 
+    ::: callout-note
+    Correct.
+    :::
+
     As surveys are voluntary, one potential source of bias is non-response bias. Specifically, considering the voluntary nature of surveys, surveys typically have a low response rate. Thus, the responses from those who completed the survey would likely not be representative of the majority, those who received the survey and chose not to answer. This is partially because those who reply to surveys tend to be fundamentally different from those who don’t.
 
     Additionally, there may be issues of undercoverage in which some administrators that may be harder to reach may be left out of the sample. Depending on how the researcher reaches out to administrators, there may be selection bias as some may be more likely to selected for the sample than others. For example, if the researcher largely recruited educational administrators from one city in the U.S. and Russia, this would cause severe selection bias as residents from that one city would have a greater chance of being selected for sample than residents of other cities.
 
-```{=html}
+    ::: callout-note
+    Correct. Also, we want to learn about democracies and non-democracies generally. Only looking at the US and Russia does not allow us to do this.
+    :::
+
 <!-- -->
-```
+
 A.  **A sample of 75 randomly selected countries' educational funding levels for each of the past 25 years.**
 
-    As the sample includes a considerable portion of the total countries in the world (75/193), there would be sampling variability, but it would be low to moderate. One potential source of bias is that many of the 75 selected countries in the sample could be fundamentally different from other countries in the sample and the population in general. Thus, there could be variables omitted from the experiment that could have significant effects on education expenditure.
+    As the sample includes a considerable portion of the total countries in the world (75/193), there would be sampling variability, but it would be low to moderate.
+
+    ::: callout-note
+    Correct.
+    :::
+
+    One potential source of bias is that many of the 75 selected countries in the sample could be fundamentally different from other countries in the sample and the population in general. Thus, there could be variables omitted from the experiment that could have significant effects on education expenditure.
+
+    ::: callout-note
+    Incorrect. Countries are selected randomly. This accounts for these potential differences in samples.
+    :::
 
 ## Question 3
 
@@ -101,6 +158,10 @@ ggplot(gdp_growth_df, aes(x = value, fill = factor(date))) +
 
 *Points: 2*
 
+::: callout-note
+2/2
+:::
+
 Describe the distribution of all countries' annual GDP growth rates in 2019 (found in the `gdp_growth_df` dataframe). Do the same for 2020. Include in those descriptions their five-number summaries.
 
 ``` r
@@ -117,9 +178,13 @@ The data for all countries’ annual GDP growth rates in 2020 is not normally di
 
 *Points: 2*
 
+::: callout-note
+1/2
+:::
+
 **Calculate the mean and standard deviation of all countries' annual GDP growth rates in 2019. Do the same for 2020.**
 
-``` r
+```{r}
 gdp_growth_df |>
       filter(date == 2020) |>
       summarise(mean(gdp_growth_df$value, na.rm = T)) |> 
@@ -138,11 +203,28 @@ gdp_growth_df |>
       pull()
 ```
 
+::: callout-note
+A coding correction:
+
+```{r}
+gdp_growth_df |>
+      filter(date == 2020) |>
+      summarise(mean(value, na.rm = T)) |> 
+      pull()
+```
+
+You're getting the same number every time because you are finding the mean of the whole vector of numbers (`gdp_growth_df$value`), not just for the selected year.
+:::
+
 The mean of all countries’ annual GDP growth rates in 2020 is -1.18. The standard deviation of all countries’ annual GDP growth rates in 2020 is 8.03.
 
 ### Part C
 
 *Points: 1*
+
+::: callout-note
+1/1
+:::
 
 **Compare the mean and standard deviation of GDP growth rates in 2019 with those in 2020. What, generally, happened to each country's economy? Do not use the words or phrases "mean" or "standard deviation" in your answer.**
 
