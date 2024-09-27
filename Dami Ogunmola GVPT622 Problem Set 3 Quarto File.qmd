@@ -8,7 +8,6 @@ toc: true
 editor: visual
 execute: 
   warning: false
-bibliography: references.bib
 editor_options: 
   chunk_output_type: inline
 ---
@@ -30,8 +29,16 @@ The `dem_wealth_df` data set (taken from the wonderful Dr Steven V Miller's [blo
 
 *Points: 2*
 
+::: callout-note
+2/2
+:::
+
 > **Using the `dem_wealth_df` data frame loaded in above, produce a scatter plot of the variables `democracy_score` and `gdp_per_cap` (with `gdp_per_cap` as the dependent variable on the y-axis). Professionally format your graph.**
 >
+> ::: callout-note
+> You put the curly brackets around the r after the \`\`\`.
+> :::
+
 > ``` r
 > {r}
 > ggplot(dem_wealth_df, aes(x = democracy_score, y = gdp_per_cap)) +
@@ -64,9 +71,19 @@ The `dem_wealth_df` data set (taken from the wonderful Dr Steven V Miller's [blo
 
 *Points: 3*
 
+::: callout-note
+2/3
+:::
+
 > **Describe the scatter plot. Note suspected outliers if any exist (a visual inspection will suffice for this question).**
 >
-> > The overall pattern of the scatterplot is that as a country's democracy score increases, GDP per capita tends to increase as well. The direction of the relationship is positive. I can tell because both variables move in the same direction (increasing when the other increases). Given the correlation coefficient of 0.7008677, I would also classify the relationship between the two variables as strong positive.
+> > The overall pattern of the scatterplot is that as a country's democracy score increases, GDP per capita tends to increase as well.
+> >
+> > ::: callout-note
+> > Be careful not to use causal language. Democracies tend to have higher GDP per capita.
+> > :::
+> >
+> > The direction of the relationship is positive. I can tell because both variables move in the same direction (increasing when the other increases). Given the correlation coefficient of 0.7008677, I would also classify the relationship between the two variables as strong positive.
 > >
 > > Despite the overall pattern, I suspect there may be some outliers in the dataset. For example, I suspect that Venezuela is an outlier. Venezuela has a democracy score of -0.118, yet has a GDP per capita of 9749.780. That is unusual relative to other countries with similar democracy scores as countries in the sample with a democracy score below zero tended to have GDP per capitas below around 7,500. Furthermore, Venezuela's GDP per capita is even slightly higher than countries with high democracy scores like Iceland, the Netherlands, and Belgium. I also suspect that the United States and Switzerland are outliers. Despite not having the highest democracy score, the United States has a GDP per capita of 17,171.392, the highest GDP per capita of the sampled countries. What's more, as the US has a democracy score comparable to Ireland, the US should have a relatively similar GDP per capita; yet, the US's GDP per capita is more than double that of Ireland's. Similarly, Switzerland has a democracy score of 1, but has a GDP per capita that far outpaces other sample countries with a similar democracy score.
 
@@ -74,13 +91,23 @@ The `dem_wealth_df` data set (taken from the wonderful Dr Steven V Miller's [blo
 
 *Points: 2*
 
+::: callout-note
+1.5/2
+:::
+
 > Calculate the correlation coefficient between `democracy_score` and `gdp_per_cap`. What does it tell you about the relationship between a country's level of democracy and its citizens' wealth?
 >
 > ``` r
 > cor(dem_wealth_df$democracy_score, dem_wealth_df$gdp_per_cap, use = "complete.obs")
 > ```
 >
-> The correlation coefficient is 0.7008677. This tells me that there is a strong positive correlation between a country’s level of democracy and its citizens' wealth. Specifically, this tells me that as a country’s democracy score, and thus, level of democracy increases, on average, its citizens’ wealth also increases. Thus, among the sampled countries, more democratic countries tend to have citizens with higher levels of wealth.
+> The correlation coefficient is 0.7008677. This tells me that there is a strong positive correlation between a country’s level of democracy and its citizens' wealth. Specifically, this tells me that as a country’s democracy score, and thus, level of democracy increases, on average, its citizens’ wealth also increases.
+>
+> ::: callout-note
+> Avoid using causal language.
+> :::
+>
+> Thus, among the sampled countries, more democratic countries tend to have citizens with higher levels of wealth.
 
 ## Question 3
 
@@ -90,21 +117,39 @@ I would like to know whether individuals with higher levels of education tend to
 
 *Points: 5*
 
+::: callout-note
+3/5
+:::
+
 > Using the `nes` data set in the `polisciols` R package, construct a cross-tab of the relationship between `attention_to_politics` and `education`. Focus only on those respondents who provided answers (filter out "Refused", "Don't know", and missing responses).
 >
 > ``` r
 > datasummary_crosstab(attention_to_politics ~ education, data = nes)
 > ```
 
+::: callout-note
+> filter out "Refused", "Don't know", and missing responses
+
+Also, cutting the data down the columns (not across the rows) is better.
+:::
+
 ### Part B
 
 *Points: 3*
+
+::: callout-note
+1.5/3
+:::
 
 > **Describe the relationship between these two variables (if one exists).**
 >
 > Those with some post-high school education but no bachelor’s degree, a bachelor’s degree, and a graduate degree tended to pay considerable attention to politics, answering “always”, more often than those with a high school credential or less than a high school credential.
 >
 > Those with some post-high school education, but no bachelor’s degree tended to pay the most attention to politics than the individuals of other educational attainment levels. Specifically, based on percentage and count, those with some post-high school education, but no bachelor’s degree answered that they “always” pay attention to politics more frequently than other groups. However, the counts of those with “some high school, but no bachelor’s, a bachelor’s, and a graduate degree who answered “always” were comparable at 590, 499, 512 respectively.
+>
+> ::: callout-note
+> Never compare raw counts. It is misleading. Always compare proportions calculated within your DV.
+> :::
 >
 > The relationship between education and the level of attention paid to politics is a bit unclear. Those with a minimum of some post-high school education are shown to pay attention to politics more than those with only a high school credential or less than a high school credential. Yet, the relationship between the two variables is not perfectly linear as those with the highest level of educational attainment (graduate degrees) did not respond “always” at the highest rate. Similarly, those with a bachelor’s degree did not respond that they paid more attention to politics than those with some post-high school, no bachelor’s degree.
 >
@@ -114,13 +159,23 @@ I would like to know whether individuals with higher levels of education tend to
 
 *Points: 5*
 
+::: callout-note
+4/5
+:::
+
 **I hypothesize that US voters who identify as being religious are less likely to support Federal government funding of scientific research. To test this, I run a survey of a representative sample of the US voting population. I ask respondents to indicate how often they attend religious ceremonies as a proxy measure of how strongly they identify as religious. They can answer: never, only for significant events, or regularly. Next, I ask respondents whether they think the Federal government's funding of scientific research is "too little", "about right", or "too much".**
 
 > **Describe how you would construct a cross-tab to evaluate my hypothesis. Which responses (religious identification or support for Federal funding) would you compare within? Relatedly, which would you vary? Finally, what statistics would you use to make your comparisons?**
 >
 > I would place the variable, support for federal government funding of scientific research along the left side of the crosstab, forming the rows of the crosstab. I would place the variable for religious identification along the top of the crosstab, forming the columns of the crosstab. Based on the hypothesis, I would expect to see that those who never go to church would answer that the federal government gives too little or about the right amount of funding for scientific research more than the other respondent groups. I would similarly expect that those who regularly go to church would answer most frequently that the federal government gives too much funding for scientific research.
 >
-> To test the hypothesis, I would examine the rows for each response for views on federal funding for scientific research (“too little”, “about right”, or “too much”) to examine the general distribution of responses, focusing on the percentages. I would examine the row displaying the counts and percentages for the response “too little”. I would examine if those who responded that they did not go to church frequently responded more frequently that the federal government gave too little or about the right amount of funding for scientific research and those who went to church regularly responded that the federal government gave too much funding.
+> To test the hypothesis, I would examine the rows for each response for views on federal funding for scientific research (“too little”, “about right”, or “too much”) to examine the general distribution of responses, focusing on the percentages.
+>
+> ::: callout-note
+> Columns would be more appropriate.
+> :::
+>
+> I would examine the row displaying the counts and percentages for the response “too little”. I would examine if those who responded that they did not go to church frequently responded more frequently that the federal government gave too little or about the right amount of funding for scientific research and those who went to church regularly responded that the federal government gave too much funding.
 >
 > I would also compare the counts and percentages of respondents within the religious identification column, examining the distribution of the proportion of those who regularly attend church who selected each answer in order to see what answers did those who attend select most frequently out of all of the choices. I would also compare the percentages of those who regularly attend church against the frequency of response of those who are less religious.
 
@@ -132,7 +187,15 @@ Let's return to our original question of the relationship between democracy and 
 
 *Points: 2*
 
+::: callout-note
+1/2
+:::
+
 > **Create two new variables based on a country's level of democracy, and its citizens' wealth. For the democracy variable, split countries into three categories: `autocracy` if they score in the lowest third of democracy scores, `hybrid` if they score in the middle third, and `democracy` if they score in the highest third. Similarly, for the wealth variable, split countries into three categories: `low income` if they score in the lowest third of GDP per capita, `middle income` if they score in the middle third, and `high income` if they score in the highest third.**
+
+::: callout-note
+These are not thirds of the democracy score or GDP per capita.
+:::
 
 ``` r
 dem_wealth_df$income_category <- ifelse(dem_wealth_df$gdp_per_cap > 0 & dem_wealth_df$gdp_per_cap < 6000,"Low Income", ifelse(dem_wealth_df$gdp_per_cap >= 6000 & dem_wealth_df$gdp_per_cap < 12000, "Middle Income",ifelse(dem_wealth_df$gdp_per_cap >= 12000 & dem_wealth_df$gdp_per_cap < 18000, "High Income", NA)))
@@ -144,6 +207,10 @@ dem_wealth_df$democracy_category <- ifelse(dem_wealth_df$democracy_score > -1 & 
 
 *Points: 3*
 
+::: callout-note
+3/3
+:::
+
 > **Create a cross-tab.**
 >
 > ``` r
@@ -154,6 +221,10 @@ dem_wealth_df$democracy_category <- ifelse(dem_wealth_df$democracy_score > -1 & 
 
 *Points: 5*
 
+::: callout-note
+5/5, error carried forward.
+:::
+
 > **Describe the relationship between these variables.**
 
 From my previous calculation of the corelation coefficient, I know that there is a strong positive relationship between the variables, a country’s level of democracy (as defined by its democracy score and related grouping) and its citizens wealth (as defined by GDP per capita). (However, the considerable strength of the relationship may be partially the result of skew due to outliers).
@@ -163,5 +234,3 @@ Based on the crosstab, autocracies tended more often than other countries with m
 In the sample, out of the democracies, six were high income. Relatedly, zero high income countries were autocratic and all six high income countries were democracies, suggesting a strong relationship between high levels of democracy and a higher GDP per capita.
 
 Furthermore, out of the democracies, only 2 were low income, while 12 were middle income. Out of the low income countries, 10 were hybrid. While 1- hybrid states were low income, only one was middle income and none were high income. Ultimately the distribution of the data suggests that states with considerably low democracy scores, specifically autocracies, were more likely to be lower income, and thus, have lower levels of citizen wealth. However, the majority of democracies were middle and high income, with all high income countries being democracies. Thus, this confirms the findings of the correlation coefficient in regard to the strong positive relationship between level of democracy and GDP per capita: as a country's score and level of democratization increases to that of democracy, its wealth is likely to increase as well.
-
-	
