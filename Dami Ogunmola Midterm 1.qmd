@@ -299,7 +299,7 @@ skimr::skim(renewables_df$gdp_per_cap)
 
 The median, or center of the data, is 7,317.
 
-The distribution of GDP per capita across countries globally is not normally distributed. Instead, as the mean (27,559) is greater than the median, I would classify the distribution as unimodal and right skewed. The majority of the recorded values of GDP per capita are under 25,000 with the greatest amount being clustered around or closer to 5,000/7,000 though some outliers are greater than 150,000.
+The distribution of GDP per capita across countries globally is not normally distributed. Instead, as the mean (27,559) is greater than the median, I would classify the distribution as unimodal and right skewed. The majority of the recorded values of GDP per capita are under 25,000 with the greatest amount being clustered around or closer to 5,000 and 7,000 though some outliers are greater than 150,000.
 
 The minimum is 217 and the maximum is 199,383 with the first quartile at 2,449 and the third quartile at 23,676.
 
