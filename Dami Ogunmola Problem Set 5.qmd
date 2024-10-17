@@ -1,0 +1,153 @@
+---
+title: "Problem Set 5"
+subtitle: "Due date: 23 October"
+format: 
+  html:
+    self-contained: true
+toc: true
+editor: visual
+execute: 
+  echo: true
+---
+
+Please upload your completed assignment to the ELMs course site (under the assignments menu) and to your class Github repository. You need to upload both your Quarto document (with R code, as needed) and its rendered output (either as a PDF or HTML file).
+
+**Total points: 25**
+
+## Question 1
+
+*Total points: 6*
+
+Use the data in the table below to answer the following questions.
+
+```{r}
+#| echo: false
+
+tibble::tibble(
+  `Age group` = c("18-24", "25-30", "31 and up", "TOTAL"),
+  `Non-voters` = c(70, 40, 220, 330),
+  Voters = c(50, 50, 570, 670),
+  Total = `Non-voters` + Voters
+) |> 
+  knitr::kable(caption = "Voting by Age in 2000")
+```
+
+### Part A
+
+*Points: 2*
+
+**What is the probability of being 25-30 or a non-voter?**
+
+The probability of being 25-30 or a non-voter is .4068 or 40.68%.
+
+### Part B
+
+*Points: 4*
+
+**Assuming a normal distribution, report the 95% confidence intervals for the percentage of 18-to-24-year-olds who did not vote, and then the percentage of 25-to-30-year-olds who did not vote.**
+
+The confidence interval for the percentage of 18-to-24-year-olds who did not vote is (0.4951, 0.6715).
+
+The confidence interval for the percentage of 25-to-30-year-olds who did not vote is (0.3418, 0.5471).
+
+## Question 2
+
+*Total points:* *7*
+
+**Assume that the standard deviation for the population distribution of a state in which you want to conduct a poll is 200.**
+
+### Part A
+
+*Points: 3*
+
+**Calculate the spread of the sampling distribution for each of the following sample sizes: 1, 4, 25, 100, 250, 1000, 5,000, and 10,000.**
+
+The spread of the sampling distribution for a sample size of 1 is 200.
+
+The spread of the sampling distribution for a sample size of 4 is 100.
+
+The spread of the sampling distribution for a sample size of 25 is 40.
+
+The spread of the sampling distribution for a sample size of 100 is 20.
+
+The spread of the sampling distribution for a sample size of 250 is 12.64911064 or 12.65.
+
+The spread of the sampling distribution for sample size of 1000 is 6.32455532 or 6.32.
+
+The spread of the sampling distribution for sample size of 5,000 is 2.828427125 or 2.83.
+
+The spread of the sampling distribution for sample size of 10,000 is 2.
+
+### Part B
+
+*Points: 1*
+
+**Describe specifically how the variability of the sampling distribution changes as the sample size varies. Considering the expense of running a poll, which sample size do you think is most optimal if conducting the poll?**
+
+As the sample size increases, the variability of the sampling distribution decreases. With smaller increases of a smaller sample size, the decrease in spread and variability is more drastic (ex: the large decrease of spread given the sample size increase from 4 to 100). Yet, when the sample size increases to the thousands, the decrease in spread and variability per increase in sample size is less drastic (ex: the small decrease in the spread given the increase in sample size from 5,000 to 10,000).
+
+Considering the expense of running a poll, I think a sample size of 5,000 would be the most optimal.
+
+### Part C
+
+*Points: 3*
+
+**Display your results graphically (using R) with the sample size on the x-axis and the standard error (of the sampling distribution) on the y-axis.**
+
+```{r}
+spread <- c(200, 100, 40, 20, 12.65, 6.32, 2.83, 2)
+sample_size <- c(1, 4, 25, 100, 250, 1000, 5000, 10000)
+question_2 <- data.frame(sample_size, spread)
+ggplot(question_2, aes(x = sample_size, y = spread)) +
+    geom_line() +
+    theme_minimal() +
+    labs(x = "Sample Size",
+         y = "Standard Error (of the sampling distribution)") +
+    scale_x_continuous(labels = scales::label_comma())
+```
+
+## Question 3
+
+*Points: 4*
+
+**Suppose you conduct a survey (to generate a sample mean of interest) and find that it has a margin of error of 4.5 with a sample size of 900 using a 95% confidence interval. What would the margin of error be for a 90% confidence interval?**
+
+The margin of error for a 90% confidence interval would be 4.4995.
+
+## Question 4
+
+*Points: 4*
+
+**Assume that, in State A, the mean income in the population is \$20,000 with a standard deviation of \$2,000. If you took an SRS of 900 individuals from that population, what is the probability that you would get a sample mean income of \$20,200 or greater? What would be the probability if the sample size was only 25?**
+
+::: callout-note
+Assume a normal distribution for both questions.
+:::
+
+**Sample Size 900**
+
+Z-score = 3
+
+1 - .9987 = 0.0013
+
+If you took an SRS of 900 individuals from that population, the probability that you would get a sample mean income of \$20,200 or greater is 0.0013 or 0.13%.
+
+**Sample Size 25**
+
+Z-score: 0.5
+
+1 - .6915 = 0.3085
+
+If you took an SRS of 25 individuals from that population, the probability that you would get a sample mean income of \$20,200 or greater is 0.3085 or 30.85%.
+
+## Question 5
+
+*Points: 4*
+
+**Assume that a coin is fair. If I flip a coin 500 times, what is a 95% confidence interval for the range of the count of heads that I will get? What if I flip the coin 5,000 times? What about 50,000 times?**
+
+If you flip a fair coin 500 times, the 95% confidence interval for the range of the count of heads that you will get is (0.4562, 0.5438), meaning (\~288 heads, \~272 heads).
+
+If you flip a fair coin 5,000 times, the 95% confidence interval for the range of the count of heads that you will get is (0.4861, 0.5139), meaning (\~243 heads, \~257 heads).
+
+If you flip a fair coin 50,000 times, the 95% confidence interval for the range of the count of heads that you will get is (0.4956, 0.5044), meaning (\~248 heads, \~252 heads).
