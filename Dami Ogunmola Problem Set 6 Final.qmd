@@ -134,7 +134,7 @@ This interval does indicate support for a one-tailed test of the hypothesis beca
 
 **Suppose I conduct a difference of means test and obtain a t-statistic of 2.50. What does this indicate about the statistical significance of the sample mean compared to the null hypothesis?**
 
-A t-statistic of 2.50 corresponds to .9938 on the z-table and a p-value of .0062. As the commonly-used minimum p-value in the social sciences is .05, the p-value of .0062 suggests the statistical significance of the sample mean compared to the null hypothesis. Specifically, there is a .62% chance that an experiment or study would have resulted in the sample mean if the null hypothesis was true and there was no difference in the population between the two groups.
+A t-statistic of 2.50 corresponds to .9938 on the z-table and a p-value of .0062. As the commonly-used p-value in the social sciences is .05, the p-value of .0062 suggests the statistical significance of the sample mean compared to the null hypothesis. Specifically, there is a .62% chance that one would have pulled a sample with the given sample mean if the null hypothesis was true and there was no difference in the population between the two groups.
 
 ## Question 4
 
