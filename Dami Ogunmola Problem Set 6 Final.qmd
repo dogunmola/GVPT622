@@ -188,15 +188,13 @@ $$
 \frac{\left(.379-.40\right)}{\sqrt{\frac{.40\left(1-.40\right)}{720}}} = -1.150217371
 $$
 
--1.15 corresponds to a p-value of .1251 on the z table. Thus, the one-tailed p-value is .1251. This means that there is 12.51% chance of observing the sample proportion if the null hypothesis were true. This also means that based on social science standards of a .05 p-value that the results are not statistically significant.
+-1.15 corresponds to a p-value of .1251 on the z table. Thus, the one-tailed p-value is .1251. This means that there is 12.51% chance of pulling the sample and observing the sample proportion if the null hypothesis were true. This also means that based on social science standards of a .05 p-value that the results are not statistically significant.
 
 ### Part E
 
 **Do the data support my hypothesis? Why, or why not?**
 
-The data does not support your hypothesis. Calculating a p-value is a critical way to assess statistical significance and whether data supports the alternative hypothesis.
-
-As the p-value (.1251) is greater than 0.05 (the most commonly-used p-value in the social sciences), we must fail to reject the null hypothesis.
+The data does not support your hypothesis. Calculating a p-value is a critical way to assess statistical significance and whether data supports the alternative hypothesis. As the p-value (.1251) is greater than 0.05 (the most commonly-used p-value in the social sciences), we must fail to reject the null hypothesis, indicating that the data does not support the hypothesis.
 
 ## Question 5
 
@@ -218,7 +216,7 @@ q_5_df <- wb_data(c("SP.DYN.TFRT.IN", "SE.ADT.1524.LT.FE.ZS"),
 
 **I hypothesize that countries with higher rates of literacy among young women have lower birth rates, on average, compared to countries that have lower rates of young female literacy. Use data collected above from the World Bank to test my hypothesis. State the null hypothesis and interpret what the results tell us about the null and alternative hypotheses. Show all relevant work in a professional format.**
 
-The null hypothesis is that there is no difference in the fertility rates of countries with high or low female literacy rates. Thus, if the null hypothesis were true, there would be no significant difference in the mean fertility rates between countries with higher and lower literacy rates. The boxplot below, with no discernible difference in the mean fertility rates of countries based on their literacy rate, demonstrates what the mean fertility rate of countries with low and high literacy rates would look like in the null world.
+The null hypothesis is that there is no difference in the fertility rates of countries with high or low female literacy rates. Thus, if the null hypothesis were true, there would be no significant difference in the mean fertility rates between countries with higher and lower literacy rates. The boxplot below, displaying no discernible difference in the mean fertility rates of countries based on their literacy rate, demonstrates what the mean fertility rate of countries with low and high literacy rates would look like in the null world.
 
 ```{r}
 random_5 <- sample(1:5000, 5)
