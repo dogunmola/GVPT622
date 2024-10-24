@@ -1,0 +1,286 @@
+---
+title: "Problem Set 6"
+subtitle: "Due date: 23 October"
+format: 
+  html:
+    self-contained: true
+toc: true
+editor: visual
+execute: 
+  echo: true
+  warning: false
+---
+
+Please upload your completed assignment to the ELMs course site (under the assignments menu) and to your class Github repository. You need to upload both your Quarto document (with R code, as needed) and its rendered output (either as a PDF or HTML file).
+
+**Total points: 35**
+
+## Question 1
+
+*Points: 10*
+
+**I hypothesize that the mean mathematics SAT score for University of Maryland students is different to 600. I take an SRS of 625 students and find that the mean mathematics score among those students is 610. The standard deviation of my sample is 75.**
+
+### Part A
+
+**Based on my sample, what is a point estimate for the mean mathematics SAT score for University of Maryland students?**
+
+Based on the sample, a point estimate for the mean mathematics SAT score for University of Maryland students is 610.
+
+### Part B
+
+**What is a 95% confidence interval around that estimate?**
+
+95% confidence interval equation = $\bar{x} \pm z \cdot (s\div \sqrt{n})$
+
+$$
+\bar{x} = 610,
+n = 625,
+s = 75,
+z = 1.96
+$$
+
+$$
+610 + 1.96 \cdot (75\div \sqrt{625}) = 615.88
+$$
+
+$$
+610 - 1.96 \cdot (75\div \sqrt{625}) = 604.1
+$$
+
+The 95% confidence interval around that estimate is (604.12, 615.88)
+
+### Part C
+
+**What is the null hypothesis?**
+
+The null hypothesis is that the mean SAT score for University of Maryland students is equal to 600.
+
+### Part D
+
+**What is the two-tailed p-value and what does it mean?**
+
+$$
+\frac{\left(610-600\right)}{\frac{75}{\sqrt{625}}} = 3.333333333
+$$
+
+Test statistic of 3.33 corresponds to .9996 on the z-table.
+
+$$
+1-.9996 = .0004
+$$
+
+$$
+.0004 \cdot 2 = .0008
+$$
+
+The two-tailed p-value is equal to .0008. This means that there is a .08% chance that the mean SAT score found in the sample would have been found in the population if the null hypothesis was true. The low p-value suggests the statistical significance of the sample mean and that one can reject the null hypothesis.
+
+### Part E
+
+**Do the data support my hypothesis? Why, or why not?**
+
+The data does support your hypothesis. The low p-value of .0008 suggests that there is an extremely low probability (.08%) that you would have found a mean SAT score of 610 if the null hypothesis is true (ie the mean SAT of UMD students is not different from 600).
+
+Thus, the low p-value suggests the statistical significance of the findings and that the data supports the hypothesis.
+
+## Question 2
+
+*Points: 10*
+
+**I take an SRS of 900 citizens in a public opinion survey and find that the mean feeling thermometer rating (on a 0 to 100 scale) of President Biden is 51.5 with a standard deviation of 25. Now, suppose I hypothesize that feelings toward Biden should be greater than 50.**
+
+### Part A
+
+**What is the null hypothesis?**
+
+The null hypothesis is that feelings toward Biden are equal to 50.
+
+### Part B
+
+**What is a 95% confidence interval around the sample statistic? Does this interval indicate support for a two-tailed test of my hypothesis (`p < 0.05` as the threshold)? Why, or why not?**
+
+$$
+51.5+1.96\cdot\left(\frac{25}{\sqrt{900}}\right) = 53.13333333
+$$
+
+$$
+51.5-1.96\cdot\left(\frac{25}{\sqrt{900}}\right) = 49.86666667
+$$
+
+The sample statistic is 51.5. The 95% confidence interval around the sample statistic is (49.867, 53.133).
+
+This interval does not indicate support for a two-tailed test of the hypothesis because the hypothesized mean falls within the above interval (49.867, 53.133).
+
+### Part C
+
+**What is a 90% confidence interval around the sample statistic? Does this interval indicate support for a one-tailed test of my hypothesis (`p < 0.05` as the threshold)? Why, or why not?**
+
+$$
+51.5+1.645\cdot\left(\frac{25}{\sqrt{900}}\right) = 52.87083333
+$$
+
+$$
+51.5-1.645\cdot\left(\frac{25}{\sqrt{900}}\right) = 50.12916667
+$$
+
+The 90% confidence interval around the sample statistic is (50.129, 52.871).
+
+This interval does indicate support for a one-tailed test of the hypothesis because the hypothesized mean does not fall within the above interval.
+
+## Question 3
+
+*Points: 5*
+
+**Suppose I conduct a difference of means test and obtain a t-statistic of 2.50. What does this indicate about the statistical significance of the sample mean compared to the null hypothesis?**
+
+A t-statistic of 2.50 corresponds to .9938 on the z-table and a p-value of .0062. As the commonly-used minimum p-value in the social sciences is .05, the p-value of .0062 suggests the statistical significance of the sample mean compared to the null hypothesis. Specifically, there is a .62% chance that an experiment or study would have resulted in the sample mean if the null hypothesis was true and there was no difference in the population between the two groups.
+
+## Question 4
+
+*Points: 5*
+
+I hypothesize that fewer than 40% of registered voters approve of President Biden. I conduct an SRS of 720 registered voters and find that 37.9% of them approve of President Biden.
+
+### Part A
+
+**Based on my sample, what is a point estimate for the proportion of the population that approves of President Biden?**
+
+Based on the sample, a point estimate for the proportion of the population that approves of President Biden is 37.9(%).
+
+### Part B
+
+**What is a 90% confidence interval around that estimate?**
+
+Confidence Interval = $\bar{x} \pm z \cdot (s\div \sqrt{n})$
+
+z = 1.645
+
+standard error of the sample proportion = $\sqrt{\frac{p\cdot\left(1-p\right)}{n}}$
+
+$$
+\sqrt{\frac{.379\cdot\left(1-.379\right)}{720}} = 0.01808003042
+$$
+
+$$
+37.9 + 1.645 \cdot (0.01808003042\div \sqrt{720}) = 37.90110841
+$$
+
+$$
+37.9 - 1.645 \cdot (0.01808003042\div \sqrt{720}) = 37.89889159
+$$
+
+The confidence interval around the estimate is (37.89889159, 37.90110841)
+
+### Part C
+
+**What is the null hypothesis?**
+
+The null hypothesis is that 40% of registered voters approve of President Biden.
+
+### Part D
+
+**What is the one-tailed p-value and what does it mean?**
+
+test statistic = $\frac{\hat{p} - p_0}{\frac{\sqrt{p_0(1-p_0)}}{n}}$
+
+$$
+\frac{\left(.379-.40\right)}{\sqrt{\frac{.40\left(1-.40\right)}{720}}} = -1.150217371
+$$
+
+-1.15 corresponds to a p-value of .1251 on the z table. Thus, the one-tailed p-value is .1251. This means that there is 12.51% chance of observing the sample proportion if the null hypothesis were true. This also means that based on social science standards of a .05 p-value that the results are not statistically significant.
+
+### Part E
+
+**Do the data support my hypothesis? Why, or why not?**
+
+The data does not support your hypothesis. Calculating a p-value is a critical way to assess statistical significance and whether data supports the alternative hypothesis.
+
+As the p-value (.1251) is greater than 0.05 (the most commonly-used p-value in the social sciences), we must fail to reject the null hypothesis.
+
+## Question 5
+
+*Points: 5*
+
+```{r}
+
+library(wbstats)
+library(tidyverse)
+
+q_5_df <- wb_data(c("SP.DYN.TFRT.IN", "SE.ADT.1524.LT.FE.ZS"),
+                  start_date = 2022,
+                  end_date = 2022) |> 
+  rename(lit_rate = `SE.ADT.1524.LT.FE.ZS`,
+         fertility = `SP.DYN.TFRT.IN`) |> 
+  mutate(lit_rate = cut_interval(lit_rate, 2, labels = c("Lower half", "Upper half"))) |> 
+  drop_na(fertility, lit_rate)
+```
+
+**I hypothesize that countries with higher rates of literacy among young women have lower birth rates, on average, compared to countries that have lower rates of young female literacy. Use data collected above from the World Bank to test my hypothesis. State the null hypothesis and interpret what the results tell us about the null and alternative hypotheses. Show all relevant work in a professional format.**
+
+The null hypothesis is that there is no difference in the fertility rates of countries with high or low female literacy rates. Thus, if the null hypothesis were true, there would be no significant difference in the mean fertility rates between countries with higher and lower literacy rates. The boxplot below, with no discernible difference in the mean fertility rates of countries based on their literacy rate, demonstrates what the mean fertility rate of countries with low and high literacy rates would look like in the null world.
+
+```{r}
+random_5 <- sample(1:5000, 5)
+
+lit_null |> 
+    filter(replicate %in% random_5) |> 
+    ggplot(aes(x = lit_rate, y = fertility, fill = lit_rate)) + 
+    geom_boxplot() + 
+    theme_bw() + 
+    labs(x = "Literacy Rate",
+         y = "Fertility",
+         fill = "Literacy Rate") + 
+    scale_fill_discrete(type = c("#EE799F", "#8bc5ed"))
+```
+
+However, as shown in the boxplot below, within the sample, there is a significant difference in the mean fertility rates of countries with lower literacy rates (lower half) and countries with higher literacy rates (upper half), providing support for the alternative hypothesis.
+
+```{r}
+ggplot(q_5_df, aes(x = lit_rate, y = fertility, fill = lit_rate)) +
+    geom_boxplot() +
+    theme_bw() +
+    scale_fill_discrete(type = c("#EE799F", "#8bc5ed")) + 
+    labs(
+        x = "Literacy Rate",
+        y = "Fertility",
+        fill = "Literacy Rate")
+```
+
+```{r}
+fertility_avg <- q_5_df |> 
+    group_by(lit_rate) |> 
+    summarise(n_countries = n(), 
+              avg_fertility = mean(fertility)) |> 
+    mutate(diff_means = avg_fertility - lead(avg_fertility))
+
+fertility_avg
+
+diff_means <- fertility_avg |> 
+    drop_na(diff_means) |> 
+    pull(diff_means)
+
+    diff_means
+```
+
+Specifically, the difference in mean fertility rates between countries with high and low literacy rates is 2.654364. Thus, on average, women in countries with low literacy rates had 2.65 more children than women in countries with high literacy rates.
+
+```{r}
+visualize(lit_diffs_null) + 
+    shade_confidence_interval(boostrapped_confint, color = "#8bc5ed", fill = "#85d9d2") + 
+    geom_vline(xintercept = diff_means, size = 1, color = "#77002c") +
+    labs(x = "Simulated difference in average ratings (Upper half − Lower half literacy rates)", y = "Count",
+         title = "Simulation-based null distribution of differences in means",
+         subtitle = "Red line shows observed difference")
+```
+
+The above distribution demonstrates that it would be unlikely to randomly select a sample from the population with the above difference in mean fertility rates between countries with high and low literacy rates if there was no difference present in the general population in average fertility rates among countries with low and high literacy rates.
+
+```{r}
+t_test_fertility <- t.test(fertility ~ lit_rate, data = q_5_df)
+t_test_fertility
+```
+
+Lastly, the p-value of 0.001157 (p \< .05) suggests the low probability of finding such a sample (in which countries with low literacy rates had substantially higher fertility rates than countries with high literacy rates) in the null world if there was truly no difference between the two groups, and thus, the statistical significance of the results. Specifically, there would be a .1157% chance of pulling such a sample if the null hypothesis were true.
+
+Ultimately, the results allow us to reject the null hypothesis that countries with high and low female literacy rates have the same birth rate while providing support for and allowing us to accept the alternative hypothesis that countries with lower female literacy rates, on average, tend to have higher birth rates.
