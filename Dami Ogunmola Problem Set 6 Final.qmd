@@ -13,6 +13,10 @@ execute:
 
 Please upload your completed assignment to the ELMs course site (under the assignments menu) and to your class Github repository. You need to upload both your Quarto document (with R code, as needed) and its rendered output (either as a PDF or HTML file).
 
+::: callout-note
+Please make sure your document renders without errors before submitting it.
+:::
+
 **Total points: 35**
 
 ## Question 1
@@ -23,11 +27,19 @@ Please upload your completed assignment to the ELMs course site (under the assig
 
 ### Part A
 
+::: callout-note
+2/2
+:::
+
 **Based on my sample, what is a point estimate for the mean mathematics SAT score for University of Maryland students?**
 
 Based on the sample, a point estimate for the mean mathematics SAT score for University of Maryland students is 610.
 
 ### Part B
+
+::: callout-note
+2/2
+:::
 
 **What is a 95% confidence interval around that estimate?**
 
@@ -52,11 +64,19 @@ The 95% confidence interval around that estimate is (604.12, 615.88)
 
 ### Part C
 
+::: callout-note
+2/2
+:::
+
 **What is the null hypothesis?**
 
 The null hypothesis is that the mean SAT score for University of Maryland students is equal to 600.
 
 ### Part D
+
+::: callout-note
+2/2
+:::
 
 **What is the two-tailed p-value and what does it mean?**
 
@@ -78,6 +98,10 @@ The two-tailed p-value is equal to .0008. This means that there is a .08% chance
 
 ### Part E
 
+::: callout-note
+2/2
+:::
+
 **Do the data support my hypothesis? Why, or why not?**
 
 The data does support your hypothesis. The low p-value of .0008 suggests that there is an extremely low probability (.08%) that you would have found a mean SAT score of 610 if the null hypothesis is true (ie the mean SAT of UMD students is not different from 600).
@@ -92,11 +116,19 @@ Thus, the low p-value suggests the statistical significance of the findings and 
 
 ### Part A
 
+::: callout-note
+2/2
+:::
+
 **What is the null hypothesis?**
 
 The null hypothesis is that feelings toward Biden are equal to 50.
 
 ### Part B
+
+::: callout-note
+4/4
+:::
 
 **What is a 95% confidence interval around the sample statistic? Does this interval indicate support for a two-tailed test of my hypothesis (`p < 0.05` as the threshold)? Why, or why not?**
 
@@ -113,6 +145,10 @@ The sample statistic is 51.5. The 95% confidence interval around the sample stat
 This interval does not indicate support for a two-tailed test of the hypothesis because the hypothesized mean falls within the above interval (49.867, 53.133).
 
 ### Part C
+
+::: callout-note
+4/4
+:::
 
 **What is a 90% confidence interval around the sample statistic? Does this interval indicate support for a one-tailed test of my hypothesis (`p < 0.05` as the threshold)? Why, or why not?**
 
@@ -132,6 +168,10 @@ This interval does indicate support for a one-tailed test of the hypothesis beca
 
 *Points: 5*
 
+::: callout-note
+5/5
+:::
+
 **Suppose I conduct a difference of means test and obtain a t-statistic of 2.50. What does this indicate about the statistical significance of the sample mean compared to the null hypothesis?**
 
 A t-statistic of 2.50 corresponds to .9938 on the z-table and a p-value of .0062. As the commonly-used p-value in the social sciences is .05, the p-value of .0062 suggests the statistical significance of the sample mean compared to the null hypothesis. Specifically, there is a .62% chance that one would have pulled a sample with the given sample mean if the null hypothesis was true and there was no difference in the population between the two groups.
@@ -144,11 +184,19 @@ I hypothesize that fewer than 40% of registered voters approve of President Bide
 
 ### Part A
 
+::: callout-note
+1/1
+:::
+
 **Based on my sample, what is a point estimate for the proportion of the population that approves of President Biden?**
 
 Based on the sample, a point estimate for the proportion of the population that approves of President Biden is 37.9(%).
 
 ### Part B
+
+::: callout-note
+0/1
+:::
 
 **What is a 90% confidence interval around that estimate?**
 
@@ -174,11 +222,19 @@ The confidence interval around the estimate is (37.89889159, 37.90110841)
 
 ### Part C
 
+::: callout-note
+1/1
+:::
+
 **What is the null hypothesis?**
 
 The null hypothesis is that 40% of registered voters approve of President Biden.
 
 ### Part D
+
+::: callout-note
+1/1
+:::
 
 **What is the one-tailed p-value and what does it mean?**
 
@@ -192,6 +248,10 @@ $$
 
 ### Part E
 
+::: callout-note
+1/1
+:::
+
 **Do the data support my hypothesis? Why, or why not?**
 
 The data does not support your hypothesis. Calculating a p-value is a critical way to assess statistical significance and whether data supports the alternative hypothesis. As the p-value (.1251) is greater than 0.05 (the most commonly-used p-value in the social sciences), we must fail to reject the null hypothesis, indicating that the data does not support the hypothesis.
@@ -199,6 +259,10 @@ The data does not support your hypothesis. Calculating a p-value is a critical w
 ## Question 5
 
 *Points: 5*
+
+::: callout-note
+5/5
+:::
 
 ```{r}
 
