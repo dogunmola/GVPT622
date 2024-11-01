@@ -6,6 +6,21 @@ editor: visual
 
 **Total points: 20**
 
+::: callout-note
+Please make sure your document renders without error before submitting it. If you do not know how to do this, send me an email and I will show you.
+
+This was missing:
+
+```{r}
+
+library(modelsummary)
+library(tidyverse)
+library(MetBrewer)
+library(polisciols)
+library(gmodels)
+```
+:::
+
 ## Question 1
 
 *Total points: 10*
@@ -15,6 +30,10 @@ editor: visual
 ### Part A
 
 *Points: 4*
+
+::: callout-note
+2/4, your cross-tab is the wrong way around.
+:::
 
 **Make a cross-tab, by hand, of the relationship between these two variables based on the following (completely made up) data. Make sure that you present both raw counts and the appropriate percentages to examine the relationship.**
 
@@ -61,6 +80,10 @@ age_golf_df |>
 
 *Points: 2*
 
+::: callout-note
+2/2, error carried forward
+:::
+
 **Do the data support my hypothesis? Be sure to explain the nature of the relationship (or lack thereof, if relevant).**
 
 The data does support your hypothesis. A greater proportion of those age 21-35 do not enjoy watching golf. Specifically, 45.5% of those who responded "not at all" to the question of if they liked to watch golf were between the ages of 21 and 35. Similarly, only 8.3% of those between the ages of 21 and 35 answered "very much" to the question of how much they like to watch golf. Conversely, out of those who responded they "very much" enjoy watching golf, 33.3% were 66+ and 33.3% were between 55 and 56.
@@ -72,6 +95,10 @@ But, overall, when looking at the categories "not at all" and "very much", the t
 ### Part C
 
 *Points: 2*
+
+::: callout-note
+2/2
+:::
 
 **Compute (by hand) the chi-square statistic to test the null hypothesis of no relationship between these two variables. Be sure to show your work.**
 
@@ -123,6 +150,10 @@ chisq.test(age_golf_df$preference, age_golf_df$age)
 
 *Points: 2*
 
+::: callout-note
+2/2
+:::
+
 **Using the chi-square statistic that you computed in question 1(c), can you reject the null hypothesis of no relationship between these two variables with 95% confidence? Why, or why not?**
 
 Using the chi-square statistic I computed in question 1(c), I cannot reject the null hypothesis of no relationship between these variables with 95% confidence because the chi-square of 6.093151 is associated with a p-value of 0.4128367. This means that there is a 41.28% chance of observing the results found in the sample in the population if the null hypothesis were true.
@@ -132,6 +163,14 @@ Furthermore, to reject the null hypothesis of no relationship between these two 
 ## Question 2
 
 *Points: 10*
+
+::: callout-note
+7/10
+:::
+
+::: callout-note
+Your chi-squared statistic is not correct.
+:::
 
 **I hypothesize that people with higher levels of education tend to be more likely to pay higher levels of attention to politics. Use the `nes` dataset from the `poliscidols` package to test my hypothesis. Create a cross-tab examining the relationship between individuals' levels of education (`education`) and the time they spend paying attention to politics (`attention_to_politics`).**
 
@@ -154,15 +193,15 @@ CrossTable(filtered_nes$education, filtered_nes$attention_to_politics, prop.chis
 
 ##### Calculating Expected Counts
 
-![](Desktop/Screenshot 2024-10-30 at 11.37.20 PM.png){width="288"}
+![](Desktop/Screenshot%202024-10-30%20at%2011.37.20%20PM.png){width="288"}
 
-![](Desktop/Screenshot 2024-10-30 at 11.37.30 PM.png){width="307"}
+![](Desktop/Screenshot%202024-10-30%20at%2011.37.30%20PM.png){width="307"}
 
-![](Desktop/Screenshot 2024-10-30 at 11.37.37 PM.png){width="322"}
+![](Desktop/Screenshot%202024-10-30%20at%2011.37.37%20PM.png){width="322"}
 
-![](Desktop/Screenshot 2024-10-30 at 11.37.43 PM.png){width="321"}
+![](Desktop/Screenshot%202024-10-30%20at%2011.37.43%20PM.png){width="321"}
 
-![](Desktop/Screenshot 2024-10-30 at 11.37.51 PM.png){width="409"}
+![](Desktop/Screenshot%202024-10-30%20at%2011.37.51%20PM.png){width="409"}
 
 ##### Calculating the Chi-Square Statistic and P-Value
 

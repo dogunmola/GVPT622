@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Ogunmola Problem Set 7 Final</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Ogunmola Problem Set 7 Final _files/libs/clipboard/clipboard.min.js"></script>
+<script src="Ogunmola Problem Set 7 Final _files/libs/quarto-html/quarto.js"></script>
+<script src="Ogunmola Problem Set 7 Final _files/libs/quarto-html/popper.min.js"></script>
+<script src="Ogunmola Problem Set 7 Final _files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Ogunmola Problem Set 7 Final _files/libs/quarto-html/anchor.min.js"></script>
+<link href="Ogunmola Problem Set 7 Final _files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Ogunmola Problem Set 7 Final _files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Ogunmola Problem Set 7 Final _files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Ogunmola Problem Set 7 Final _files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Ogunmola Problem Set 7 Final _files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Ogunmola Problem Set 7 Final _files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="Ogunmola Problem Set 7 Final _files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ogunmola Problem Set 7 Final</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Total points: 20</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please make sure your document renders without error before submitting it. If you do not know how to do this, send me an email and I will show you.</p>
+<p>This was missing:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MetBrewer)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(polisciols)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gmodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<p><em>Total points: 10</em></p>
+<p><strong>I hypothesize that the older someone is, the more they like watching golf. I conduct a survey based on an SRS of adults in America. The independent variable is a four-category measure of age: 21-35, 36-50, 51-65, 66-plus. The dependent variable is a three-category measure of how much they enjoy watching golf: not at all, somewhat, very much.</strong></p>
+<section id="part-a" class="level3">
+<h3 class="anchored" data-anchor-id="part-a">Part A</h3>
+<p><em>Points: 4</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>2/4, your cross-tab is the wrong way around.</p>
+</div>
+</div>
+<p><strong>Make a cross-tab, by hand, of the relationship between these two variables based on the following (completely made up) data. Make sure that you present both raw counts and the appropriate percentages to examine the relationship.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>age_golf_df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="st">"21-35"</span>, <span class="st">"51-65"</span>, <span class="st">"66-plus"</span>, <span class="st">"21-35"</span>, <span class="st">"36-50"</span>, <span class="st">"21-35"</span>, <span class="st">"36-50"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"66-plus"</span>, <span class="st">"36-50"</span>, <span class="st">"51-65"</span>, <span class="st">"51-65"</span>, <span class="st">"21-35"</span>, <span class="st">"36-50"</span>, <span class="st">"21-35"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"66-plus"</span>, <span class="st">"51-65"</span>, <span class="st">"36-50"</span>, <span class="st">"66-plus"</span>, <span class="st">"51-65"</span>, <span class="st">"21-35"</span>, <span class="st">"66-plus"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>          <span class="st">"21-35"</span>, <span class="st">"36-50"</span>, <span class="st">"66-plus"</span>, <span class="st">"21-35"</span>, <span class="st">"36-50"</span>, <span class="st">"21-35"</span>, <span class="st">"66-plus"</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>          <span class="st">"51-65"</span>, <span class="st">"51-65"</span>, <span class="st">"66-plus"</span>, <span class="st">"21-35"</span>, <span class="st">"66-plus"</span>, <span class="st">"21-35"</span>, <span class="st">"51-65"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>          <span class="st">"66-plus"</span>, <span class="st">"21-35"</span>, <span class="st">"36-50"</span>, <span class="st">"36-50"</span>, <span class="st">"66-plus"</span>),</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">preference =</span> <span class="fu">c</span>(<span class="st">"Somewhat"</span>, <span class="st">"Not at all"</span>, <span class="st">"Very much"</span>, <span class="st">"Not at all"</span>, <span class="st">"Somewhat"</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Not at all"</span>, <span class="st">"Not at all"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Very much"</span>, <span class="st">"Very much"</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Somewhat"</span>, <span class="st">"Not at all"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Very much"</span>, <span class="st">"Not at all"</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Not at all"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Very much"</span>, <span class="st">"Somewhat"</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Very much"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Very much"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Not at all"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Very much"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Very much"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Not at all"</span>, <span class="st">"Not at all"</span>, <span class="st">"Very much"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Very much"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Very much"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Somewhat"</span>, <span class="st">"Not at all"</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>age_golf_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 40 × 2
+   age     preference
+   &lt;chr&gt;   &lt;chr&gt;     
+ 1 21-35   Somewhat  
+ 2 51-65   Not at all
+ 3 66-plus Very much 
+ 4 21-35   Not at all
+ 5 36-50   Somewhat  
+ 6 21-35   Not at all
+ 7 36-50   Not at all
+ 8 66-plus Somewhat  
+ 9 36-50   Very much 
+10 51-65   Very much 
+# ℹ 30 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">datasummary_crosstab</span>(preference <span class="sc">~</span> age, <span class="at">data =</span> age_golf_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">preference</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">&nbsp;21-35</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">&nbsp;36-50</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">&nbsp;51-65</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">&nbsp;66-plus</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">All</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Not at all</td>
+<td style="text-align: left;">N</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">% row</td>
+<td style="text-align: right;">45.5</td>
+<td style="text-align: right;">9.1</td>
+<td style="text-align: right;">18.2</td>
+<td style="text-align: right;">27.3</td>
+<td style="text-align: right;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Somewhat</td>
+<td style="text-align: left;">N</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">% row</td>
+<td style="text-align: right;">35.3</td>
+<td style="text-align: right;">29.4</td>
+<td style="text-align: right;">11.8</td>
+<td style="text-align: right;">23.5</td>
+<td style="text-align: right;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Very much</td>
+<td style="text-align: left;">N</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">% row</td>
+<td style="text-align: right;">8.3</td>
+<td style="text-align: right;">25.0</td>
+<td style="text-align: right;">33.3</td>
+<td style="text-align: right;">33.3</td>
+<td style="text-align: right;">100.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">All</td>
+<td style="text-align: left;">N</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">% row</td>
+<td style="text-align: right;">30.0</td>
+<td style="text-align: right;">22.5</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: right;">27.5</td>
+<td style="text-align: right;">100.0</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>age_golf_df <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>     <span class="fu">count</span>(age, preference) <span class="sc">|&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(age) <span class="sc">|&gt;</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">|&gt;</span> </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> preference, <span class="at">y =</span> prop)) <span class="sc">+</span> </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>() <span class="sc">+</span> </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span> age) <span class="sc">+</span> </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Enjoy Watching Golf"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="st">"Percentage of respondents"</span>) <span class="sc">+</span> </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_percent</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Ogunmola-Problem-Set-7-Final-_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="part-b" class="level3">
+<h3 class="anchored" data-anchor-id="part-b">Part B</h3>
+<p><em>Points: 2</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>2/2, error carried forward</p>
+</div>
+</div>
+<p><strong>Do the data support my hypothesis? Be sure to explain the nature of the relationship (or lack thereof, if relevant).</strong></p>
+<p>The data does support your hypothesis. A greater proportion of those age 21-35 do not enjoy watching golf. Specifically, 45.5% of those who responded “not at all” to the question of if they liked to watch golf were between the ages of 21 and 35. Similarly, only 8.3% of those between the ages of 21 and 35 answered “very much” to the question of how much they like to watch golf. Conversely, out of those who responded they “very much” enjoy watching golf, 33.3% were 66+ and 33.3% were between 55 and 56.</p>
+<p>However, the relationship is not perfectly correlated as a greater proportion of those between the ages 21 and 35 and 36 and 50 respectively answered that they “somewhat” enjoy watching golf than those between the ages 51 and 65 and 66+ respectively. Specifically, 35.3% of those between the ages 21 and 35 and 29.4% of those between the ages 36 and 50 answered that they “somewhat” enjoy watching golf compared to those between the ages of 11.8% of those between 51 and 65 and 23.5% of those 66+ respectively. Furthermore, more the proportion of respondents between the ages of 51 and 65 as well as 66+ who answered “not at all” was greater than the proportion of respondents between the ages of 36 and 50 who answered “not at all”.</p>
+<p>But, overall, when looking at the categories “not at all” and “very much”, the the results suggest older respondents enjoyed watching golf more than younger respondents, suggesting support for the hypothesis.</p>
+</section>
+<section id="part-c" class="level3">
+<h3 class="anchored" data-anchor-id="part-c">Part C</h3>
+<p><em>Points: 2</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>2/2</p>
+</div>
+</div>
+<p><strong>Compute (by hand) the chi-square statistic to test the null hypothesis of no relationship between these two variables. Be sure to show your work.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>obs_values <span class="ot">&lt;-</span> <span class="fu">count</span>(age_golf_df, preference, age, <span class="at">name =</span> <span class="st">"obs_n"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>age_totals <span class="ot">&lt;-</span> <span class="fu">count</span>(age_golf_df, age, <span class="at">name =</span> <span class="st">"age_total"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>preference_totals <span class="ot">&lt;-</span> <span class="fu">count</span>(age_golf_df, preference, <span class="at">name =</span> <span class="st">"preference_total"</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>obs_exp_counts <span class="ot">&lt;-</span> preference_totals <span class="sc">|&gt;</span> </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">expand_grid</span>(age_totals) <span class="sc">|&gt;</span> </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">relocate</span>(age) <span class="sc">|&gt;</span> </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">exp_n =</span> (preference_total <span class="sc">*</span> age_total) <span class="sc">/</span> <span class="fu">nrow</span>(age_golf_df)) <span class="sc">|&gt;</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(obs_values, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"age"</span>, <span class="st">"preference"</span>))</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>obs_exp_counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 6
+   age     preference preference_total age_total exp_n obs_n
+   &lt;chr&gt;   &lt;chr&gt;                 &lt;int&gt;     &lt;int&gt; &lt;dbl&gt; &lt;int&gt;
+ 1 21-35   Not at all               11        12  3.3      5
+ 2 36-50   Not at all               11         9  2.48     1
+ 3 51-65   Not at all               11         8  2.2      2
+ 4 66-plus Not at all               11        11  3.02     3
+ 5 21-35   Somewhat                 17        12  5.1      6
+ 6 36-50   Somewhat                 17         9  3.82     5
+ 7 51-65   Somewhat                 17         8  3.4      2
+ 8 66-plus Somewhat                 17        11  4.68     4
+ 9 21-35   Very much                12        12  3.6      1
+10 36-50   Very much                12         9  2.7      3
+11 51-65   Very much                12         8  2.4      4
+12 66-plus Very much                12        11  3.3      4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(obs_exp_counts, <span class="fu">aes</span>(<span class="at">y =</span> age, <span class="at">colour =</span> preference)) <span class="sc">+</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> exp_n, <span class="at">xend =</span> obs_n, <span class="at">yend =</span> age)) <span class="sc">+</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> exp_n), <span class="at">shape =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> obs_n)) <span class="sc">+</span> </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">met.brewer</span>(<span class="st">"Johnson"</span>, <span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Number of respondents"</span>,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">colour =</span> <span class="st">"How Much Do You Enjoy Watching Golf?"</span>,</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">caption =</span> <span class="st">"Hollow points represent the expected values, solid points represent the observed values."</span>) <span class="sc">+</span> </span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Ogunmola-Problem-Set-7-Final-_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>chi_sq <span class="ot">&lt;-</span> obs_exp_counts <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">diff =</span> obs_n <span class="sc">-</span> exp_n,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">diff_2 =</span> diff<span class="sc">^</span><span class="dv">2</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">diff_2_standard =</span> diff_2 <span class="sc">/</span> exp_n) <span class="sc">|&gt;</span> </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">chi_sq =</span> <span class="fu">sum</span>(diff_2_standard)) <span class="sc">|&gt;</span> </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>()</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>chi_sq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.093151</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pchisq</span>(chi_sq, <span class="at">df =</span> <span class="dv">6</span>, <span class="at">lower.tail =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.4128367</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(age_golf_df<span class="sc">$</span>preference, age_golf_df<span class="sc">$</span>age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in chisq.test(age_golf_df$preference, age_golf_df$age): Chi-squared
+approximation may be incorrect</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  age_golf_df$preference and age_golf_df$age
+X-squared = 6.0932, df = 6, p-value = 0.4128</code></pre>
+</div>
+</div>
+</section>
+<section id="part-d" class="level3">
+<h3 class="anchored" data-anchor-id="part-d">Part D</h3>
+<p><em>Points: 2</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>2/2</p>
+</div>
+</div>
+<p><strong>Using the chi-square statistic that you computed in question 1(c), can you reject the null hypothesis of no relationship between these two variables with 95% confidence? Why, or why not?</strong></p>
+<p>Using the chi-square statistic I computed in question 1(c), I cannot reject the null hypothesis of no relationship between these variables with 95% confidence because the chi-square of 6.093151 is associated with a p-value of 0.4128367. This means that there is a 41.28% chance of observing the results found in the sample in the population if the null hypothesis were true.</p>
+<p>Furthermore, to reject the null hypothesis of no relationship between these two variables with 95% confidence there must be a p-value of 0.05 or 5% or smaller in the case of a one-tailed test.</p>
+</section>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p><em>Points: 10</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>7/10</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your chi-squared statistic is not correct.</p>
+</div>
+</div>
+<p><strong>I hypothesize that people with higher levels of education tend to be more likely to pay higher levels of attention to politics. Use the <code>nes</code> dataset from the <code>poliscidols</code> package to test my hypothesis. Create a cross-tab examining the relationship between individuals’ levels of education (<code>education</code>) and the time they spend paying attention to politics (<code>attention_to_politics</code>).</strong></p>
+<p><strong>Do the data support my hypothesis? Be sure to explain the nature of the relationship (or lack thereof, if relevant). Report a chi-square statistic. What does the chi-square statistic tell you about whether you can reject the null hypothesis of no relationship between these two variables with 95% confidence? Why, or why not?</strong></p>
+<section id="creating-the-crosstab" class="level5">
+<h5 class="anchored" data-anchor-id="creating-the-crosstab">Creating the Crosstab</h5>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>filtered_nes <span class="ot">&lt;-</span> nes <span class="sc">|&gt;</span> </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span>education <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Refused"</span>, <span class="st">"Don't know"</span>), </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>           <span class="sc">!</span>attention_to_politics <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Refused"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">CrossTable</span>(filtered_nes<span class="sc">$</span>education, filtered_nes<span class="sc">$</span>attention_to_politics, <span class="at">prop.chisq =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ 
+   Cell Contents
+|-------------------------|
+|                       N |
+| Chi-square contribution |
+|           N / Row Total |
+|           N / Col Total |
+|         N / Table Total |
+|-------------------------|
+
+ 
+Total Observations in Table:  7506 
+
+ 
+                                            | filtered_nes$attention_to_politics 
+                     filtered_nes$education |              Always |    Most of the time | About half the time |    Some of the time |               Never |           Row Total | 
+--------------------------------------------|---------------------|---------------------|---------------------|---------------------|---------------------|---------------------|
+           Less than high school credential |                  59 |                  88 |                  70 |                 105 |                  12 |                 334 | 
+                                            |               4.841 |              15.807 |               0.457 |              48.983 |              24.150 |                     | 
+                                            |               0.177 |               0.263 |               0.210 |               0.314 |               0.036 |               0.044 | 
+                                            |               0.033 |               0.029 |               0.048 |               0.087 |               0.167 |                     | 
+                                            |               0.008 |               0.012 |               0.009 |               0.014 |               0.002 |                     | 
+--------------------------------------------|---------------------|---------------------|---------------------|---------------------|---------------------|---------------------|
+                     High school credential |                 223 |                 423 |                 241 |                 279 |                  24 |                1190 | 
+                                            |              11.481 |               6.225 |               0.522 |              40.141 |              13.875 |                     | 
+                                            |               0.187 |               0.355 |               0.203 |               0.234 |               0.020 |               0.159 | 
+                                            |               0.126 |               0.140 |               0.166 |               0.231 |               0.333 |                     | 
+                                            |               0.030 |               0.056 |               0.032 |               0.037 |               0.003 |                     | 
+--------------------------------------------|---------------------|---------------------|---------------------|---------------------|---------------------|---------------------|
+Some post-high school, no bachelor’s degree |                 542 |                1049 |                 561 |                 418 |                  24 |                2594 | 
+                                            |               7.501 |               0.063 |               7.072 |               0.002 |               0.031 |                     | 
+                                            |               0.209 |               0.404 |               0.216 |               0.161 |               0.009 |               0.346 | 
+                                            |               0.307 |               0.348 |               0.387 |               0.346 |               0.333 |                     | 
+                                            |               0.072 |               0.140 |               0.075 |               0.056 |               0.003 |                     | 
+--------------------------------------------|---------------------|---------------------|---------------------|---------------------|---------------------|---------------------|
+                          Bachelor’s degree |                 463 |                 814 |                 378 |                 259 |                   8 |                1922 | 
+                                            |               0.283 |               2.369 |               0.112 |               8.110 |               5.908 |                     | 
+                                            |               0.241 |               0.424 |               0.197 |               0.135 |               0.004 |               0.256 | 
+                                            |               0.262 |               0.270 |               0.261 |               0.215 |               0.111 |                     | 
+                                            |               0.062 |               0.108 |               0.050 |               0.035 |               0.001 |                     | 
+--------------------------------------------|---------------------|---------------------|---------------------|---------------------|---------------------|---------------------|
+                            Graduate degree |                 477 |                 638 |                 201 |                 146 |                   4 |                1466 | 
+                                            |              50.936 |               4.203 |              23.956 |              34.161 |               7.200 |                     | 
+                                            |               0.325 |               0.435 |               0.137 |               0.100 |               0.003 |               0.195 | 
+                                            |               0.270 |               0.212 |               0.139 |               0.121 |               0.056 |                     | 
+                                            |               0.064 |               0.085 |               0.027 |               0.019 |               0.001 |                     | 
+--------------------------------------------|---------------------|---------------------|---------------------|---------------------|---------------------|---------------------|
+                               Column Total |                1764 |                3012 |                1451 |                1207 |                  72 |                7506 | 
+                                            |               0.235 |               0.401 |               0.193 |               0.161 |               0.010 |                     | 
+--------------------------------------------|---------------------|---------------------|---------------------|---------------------|---------------------|---------------------|
+
+ </code></pre>
+</div>
+</div>
+<p><img src="Downloads/IMG_6412.jpg" class="img-fluid" width="644"></p>
+</section>
+<section id="calculating-expected-counts" class="level5">
+<h5 class="anchored" data-anchor-id="calculating-expected-counts">Calculating Expected Counts</h5>
+<p><img src="Desktop/Screenshot%202024-10-30%20at%2011.37.20%20PM.png" class="img-fluid" width="288"></p>
+<p><img src="Desktop/Screenshot%202024-10-30%20at%2011.37.30%20PM.png" class="img-fluid" width="307"></p>
+<p><img src="Desktop/Screenshot%202024-10-30%20at%2011.37.37%20PM.png" class="img-fluid" width="322"></p>
+<p><img src="Desktop/Screenshot%202024-10-30%20at%2011.37.43%20PM.png" class="img-fluid" width="321"></p>
+<p><img src="Desktop/Screenshot%202024-10-30%20at%2011.37.51%20PM.png" class="img-fluid" width="409"></p>
+</section>
+<section id="calculating-the-chi-square-statistic-and-p-value" class="level5">
+<h5 class="anchored" data-anchor-id="calculating-the-chi-square-statistic-and-p-value">Calculating the Chi-Square Statistic and P-Value</h5>
+<p><span class="math display">\[
+\frac{\left(69-88.2317133\right)^{2}}{88.2317133}+\frac{\left(242-313.5041728\right)^{2}}{313.5041728}+\frac{\left(590-654.6980854\right)^{2}}{654.6980854}+\frac{\left(499-482.2238586\right)^{2}}{482.2238586}+\frac{\left(512-373.3421699\right)^{2}}{373.3421699}+\frac{\left(101-150.0677467\right)^{2}}{150.0677467}+\frac{\left(475-533.2194404\right)^{2}}{533.2194404}+\frac{\left(1120-1113.53461\right)^{2}}{1113.53461}+\frac{\left(867-820.1840943\right)^{2}}{820.1840943}+\frac{\left(689-634.994109\right)^{2}}{634.994109} = 108.6780976
+\]</span></p>
+<p><span class="math display">\[
+108.6780976+\frac{\left(78-72.26509573\right)^{2}}{72.26509573}+\frac{\left(275-256.7717231\right)^{2}}{256.7717231}+\frac{\left(597-536.2223859\right)^{2}}{536.2223859}+\frac{\left(401-394.9594993\right)^{2}}{394.9594993}+\frac{\left(215-305.781296\right)^{2}}{305.781296}+\frac{\left(115-61.88217968\right)^{2}}{61.88217968}+\frac{\left(317-219.8792342\right)^{2}}{219.8792342}+\frac{\left(458-459.1789396\right)^{2}}{459.1789396}+\frac{\left(280-338.2124448\right)^{2}}{338.2124448}+\frac{\left(171-426.4274669\right)^{2}}{426.4274669}+\frac{\left(13-3.553264605\right)^{2}}{3.553264605}+\frac{\left(27-12.62542955\right)^{2}}{12.62542955}+\frac{\left(25-26.36597938\right)^{2}}{26.36597938}+\frac{\left(8-19.42010309\right)^{2}}{19.42010309}+\frac{\left(4-15.03522337\right)^{2}}{15.03522337} =  452.2418416
+\]</span></p>
+<p><span class="math display">\[
+df = (5-1)(5-1)=16
+\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>chi_sq2 <span class="ot">&lt;-</span> <span class="fl">452.2418416</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pchisq</span>(chi_sq2, <span class="at">df =</span> <span class="dv">16</span>, <span class="at">lower.tail =</span> F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.876865e-86</code></pre>
+</div>
+</div>
+<p>The relationship between education level and attention paid to politics suggests that higher levels of educational attainment, on average, tend to be associated with greater amounts of attention paid to politics. Specifically, a greater proportion of those with a graduate degree and those with bachelor’s degrees responded that they paid attention to politics “always” than those with less than a high school credential, a high school credential, and some post-high school but no bachelors. Specifically, out of those with graduate degrees, 32.2% always pay attention to politics compared to 18.4% with less than a high school credential.</p>
+<p>Additionally, a greater proportion of those with less than a high school credential responded that they never pay attention to politics. Specifically, 3.5% with less than a high school credential responded that they never pay attention to politics compared to .3% of those with a graduate degree. Thus, the data supports your hypothesis that people with higher levels of education tend to be more likely to pay higher levels of attention to politics.</p>
+<p>The chi-squared statistic is 452.2418416 and the associated p-value is &lt; 3.876865e-86.</p>
+<p>Because the chi-square statistic is associated with a p-value less than 0.05, the chi-square tells me that I can reject the null hypothesis of no relationship between these two variables with 95% confidence. Specifically, a p-value equal to or less than 0.05 or 5% for a one-tailed test is necessary in order to reject the null hypothesis of no relationship between these two variables with 95% confidence.</p>
+<p>Furthermore, this means that there is an extremely low possibility that one would have pulled such a sample that displays a relationship between education level and attention paid to politics if the null hypothesis were true.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
