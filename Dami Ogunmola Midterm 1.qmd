@@ -17,6 +17,13 @@ Please read all of the questions and tables carefully and follow all instruction
 While this is an open-note exam, you are not to receive assistance from anyone else. As usual, the Honor Code applies.
 :::
 
+```{r}
+
+library(tidyverse)
+library(polisciols)
+library(modelsummary)
+```
+
 ## Conceptual Questions
 
 **Total points: 10**
@@ -26,6 +33,10 @@ Please include all work (and computations) necessary to answer the questions.
 ### Question 1
 
 *1 point*
+
+::: callout-note
+1/1
+:::
 
 **The following is a list of observed values, ordered from lowest to highest: 62, 63, 63, 64, 66, 67, 68, 68, 69, 70, 71, 72, 72, 74, 75, 76. What is an accurate five-number summary for these data?**
 
@@ -39,6 +50,10 @@ The minimum is 62. The first quartile is 65. The median is 68.5. The third quart
 ### Question 2
 
 *1 point*
+
+::: callout-note
+1/1
+:::
 
 **Suppose that the median, Q1, and Q3 from question #1 is an accurate representation of a second (hypothetical) distribution. Based on what this information tells you about this second distribution, which of the following numbers would be a suspected outlier?**
 
@@ -57,6 +72,10 @@ I suspect that C, 83, is an outlier as it is greater than 1.5 times the interqua
 
 *1 point*
 
+::: callout-note
+0.5/1
+:::
+
 **The median age of ten people in a room is 50 years. One 40-year-old person leaves the room. What can we expect will happen to the median age for the remaining nine people? Do we know the median age of those nine people; if so, what is it?**
 
 We can expect the median age of those nine people to stay the same.
@@ -67,6 +86,10 @@ Initially the median for the ten individuals was the result of adding together t
 
 *1 point*
 
+::: callout-note
+0.25/1
+:::
+
 **The mean age of ten people in a room is 50 years. One 70-years-old person leaves the room. What can we expect will happen to the mean age for the remaining nine people? Do we know the mean age of those nine people; if so, what is it?**
 
 We can expect for the mean age of the remaining nine people to decrease. We do not know the mean age of those nine people.
@@ -74,6 +97,10 @@ We can expect for the mean age of the remaining nine people to decrease. We do n
 ### Question 5
 
 *1 point*
+
+::: callout-note
+1/1
+:::
 
 **The mean age of ten people in a room is 50 years and the standard deviation is 3 years. One person leaves the room, and both the mean and the standard deviation become larger. What do we know about the age of that person?**
 
@@ -83,6 +110,10 @@ We know that the person’s age was close to 50. Specifically, the increase in t
 
 *1 point*
 
+::: callout-note
+1/1
+:::
+
 **The distribution of some variable has a median that is smaller than its mean. Which of the following statements about the distribution's shape is most consistent with this information?**
 
 C. The shape of the distribution would be skewed right.
@@ -90,6 +121,10 @@ C. The shape of the distribution would be skewed right.
 ### Question 7
 
 *1 point*
+
+::: callout-note
+1/1
+:::
 
 **Suppose I want to test the hypothesis that the U.S. public's approval of the president is higher when people have more positive perceptions of the U.S. economy. To test this hypothesis, I conduct a survey of individual-level attitudes. Which of the following research design strategies should I expect to exhibit both the greatest sampling variability (in the context of repeated sampling) and the lowest degree of expected sampling bias?**
 
@@ -99,6 +134,10 @@ D. A random sample of 600 people from a list of all U.S. residential addresses.
 
 *1 point*
 
+::: callout-note
+0.5/1
+:::
+
 **Which of those research design strategies should I expect to exhibit the lowest degree of expected sampling bias?**
 
 The research design strategy, a random sample of (1,200) people from a list of all U.S. residential addresses, should be expected to exhibit the lowest degree of expected sampling bias.
@@ -106,6 +145,10 @@ The research design strategy, a random sample of (1,200) people from a list of a
 ### Question 9
 
 *1 point*
+
+::: callout-note
+1/1
+:::
 
 **I hypothesize that, as people become more conservative, they watch NASCAR more often. My measure of conservatism is a three category variable—not conservative, somewhat conservative, very conservative. My measure of NASCAR viewing is four category—none, occasionally, often, frequently. I construct a cross tab to examine this hypothesis. What distributions would I compare to test my hypothesis?**
 
@@ -116,6 +159,10 @@ I would also compare across the columns, focusing on the “frequently” and th
 ### Question 10
 
 *1 point*
+
+::: callout-note
+1/1
+:::
 
 **I examine the correlation between my independent variable and my dependent variable, and find a correlation coefficient of 0.9. What does this tell me about the causal effect of the IV on the DV?**
 
@@ -130,6 +177,10 @@ Please include your R code. All data sets referenced below are available through
 ### Question 1
 
 *5 points total*
+
+::: callout-note
+4/5
+:::
 
 **I am interested in exploring US voters' views of Donald Trump prior to the last US Presidential election. Use the `nes` data set in the `polisciols` R package to answer the following questions.**
 
@@ -205,9 +256,25 @@ As those who have different views regarding the size of the income gap compared 
 
 They would most likely report a favorable view of Donald Trump. Specifically, they most likely provided a score between 75 and 100, such as 90 for example.
 
+::: callout-note
+It would be 100:
+
+```{r}
+
+nes |> 
+  filter(income_gap == "Smaller") |> 
+  count(therm_trump) |> 
+  slice_max(n)
+```
+:::
+
 ### Question 2
 
 *5 points*
+
+::: callout-note
+5/5
+:::
 
 **I hypothesize that providing free child care at election voting stations will increase turnout among families with young children. Design an experiment to test this hypothesis. Describe any shortcomings your experimental design may have.**
 
@@ -225,6 +292,10 @@ There is also a potential for sampling bias due to experiment recruitment method
 
 *5 points*
 
+::: callout-note
+2.5/5
+:::
+
 **I hypothesize that countries that share similar regime types are more likely to sign mutual defense agreements with each other than countries that do not share similar regimes. Use the `alliances_regime` data set from the `polisciols` R package to answer the following questions.**
 
 #### **Part A**
@@ -236,9 +307,17 @@ datasummary_crosstab(regime_dyad ~ defense_agreement, data = alliances_regime,
                      statistic = 1 ~ 1 + N + Percent("col"))
 ```
 
+::: callout-note
+You need to find the proportion within groups of your IV.
+:::
+
 #### Part B
 
 **Interpret your cross tab. Do these data support my hypothesis?**
+
+::: callout-note
+You are comparing proportions within the DV, which doesn't address the hypothesis.
+:::
 
 The data supports the hypothesis that countries that share similar regime types are more likely to sign mutual defense agreements with each other than countries that do not share similar regimes.
 
@@ -251,6 +330,10 @@ As a greater proportion of dyads with similar regime types have signed defense a
 ### Question 4
 
 *5 points*
+
+::: callout-note
+4/5
+:::
 
 I am interested in exploring the relationship between each country's wealth and its renewable energy use. To do this, I collect data on each country's GDP per capita (as a proxy for wealth) and the proportion of its overall energy consumption that is produced using renewable energy sources.
 
@@ -279,6 +362,10 @@ skimr::skim(renewables_df$renewables_use)
 ```
 
 39.8% of overall energy consumed by the the middle 50 percent of countries is produced using renewable energy sources.
+
+::: callout-note
+It's the range between 6.27% and 46.12%.
+:::
 
 #### Part B
 
