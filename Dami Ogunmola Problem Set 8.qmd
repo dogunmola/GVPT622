@@ -25,6 +25,10 @@ Please upload your completed assignment to the ELMs course site (under the assig
 
 *Points: 5*
 
+::: callout-note
+5/5
+:::
+
 For the following regression equation, $\hat{Y} = 8.5 + 6x + \epsilon$, the standard error for $\beta_0$ is 2.5, the standard error for $\beta_1$ is 3.5, and the sample size is 2000. Find the t-statistic, 95% confidence interval, and p-value (using a two-tailed test) for $\beta_1$.
 
 Is $\beta_1$ statistically significant at the 0.05-level with a two-tailed test? Why or why not?
@@ -52,6 +56,10 @@ The p-value for $\beta_1$ (using a two-tailed test) is 0.0872. Thus, $\beta_1$ i
 ## Question 2
 
 *Points: 5*
+
+::: callout-note
+5/5
+:::
 
 Suppose you estimate an OLS regression and retrieve a $R^2$ value of 0.45. If the Total Sum of Squares (TSS) from that regression equals 4,700, what is the value for the Residual Sum of Squares (RSS)?
 
@@ -81,6 +89,10 @@ The value for the Residual Sum of Squares (RSS) is 2,585.
 
 *Points: 5*
 
+::: callout-note
+5/5
+:::
+
 Suppose you estimate a bivariate regression with a sample size of 102 and obtain a regression coefficient ($\beta_1$) of 5.0. What is the largest standard error that $\beta_1$ could have and still be statistically significant (i.e., reject the null hypothesis of no relationship) at the 0.05 level with a one-tailed test?
 
 n = 102
@@ -106,6 +118,10 @@ The largest the standard error that $\beta_1$ could have and still be statistica
 ## Question 4
 
 *Points: 5*
+
+::: callout-note
+5/5
+:::
 
 ```{r}
 gapminder_df <- wbstats::wb_data(c("NY.GDP.PCAP.CD", "SP.DYN.LE00.IN"),
@@ -140,6 +156,14 @@ I would also suspect that the country with a GDP per capita between 150,000 and 
 
 *Points: 10*
 
+::: callout-note
+9/10
+:::
+
+::: callout-note
+Only use linear models to estimate linear relationships. Better to use the logged form of GDP per capita.
+:::
+
 Estimate a bivariate regression with `life_exp` as the dependent variable and `gdp_per_cap` as the independent variable and report the results in a professionally formatted table. In as much detail as possible, describe (and interpret) the regression results.
 
 ```{r}
@@ -158,7 +182,7 @@ modelsummary(lifeexp.reg,
 ```
 
 |  |  |  |  |  |  |  |
-|----------|----------|--------------|----------|----------|----------|----------|
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
 |  | **Estimate** | **Standard Error** | **T Value** | **P-Value** | **Confidence Interval (lower bound)** | **Confidence Interval (upper bound)** |
 | **(Intercept)** | 69.591 | 0.503 | 138.46 | 1.38e-200 | 68.6 | 70.6 |
 | **GDP per Capita** | 0.000195 | 0.0000167 | 11.67 | 2.49e- 24 | 0.000162 | 0.000228 |
