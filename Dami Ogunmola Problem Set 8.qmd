@@ -1,0 +1,209 @@
+---
+title: "Problem Set 8"
+subtitle: "Due date: 20 November"
+format: 
+  html:
+    self-contained: true
+toc: true
+editor: visual
+execute: 
+  echo: true
+---
+
+```{r}
+library(tidyverse)
+library(broom)
+library(modelsummary)
+library(ggdist)
+```
+
+Please upload your completed assignment to the ELMs course site (under the assignments menu). Remember to include an annotated script file for all work with R and show your math for all other problems (if applicable, or necessary). Please also upload your completed assignment to the Github repository that you have shared with us. *We should be able to run your script with no errors.*
+
+**Total points: 30**
+
+## Question 1
+
+*Points: 5*
+
+For the following regression equation, $\hat{Y} = 8.5 + 6x + \epsilon$, the standard error for $\beta_0$ is 2.5, the standard error for $\beta_1$ is 3.5, and the sample size is 2000. Find the t-statistic, 95% confidence interval, and p-value (using a two-tailed test) for $\beta_1$.
+
+Is $\beta_1$ statistically significant at the 0.05-level with a two-tailed test? Why or why not?
+
+Calculate T-statistic = B1/SEB1 = 6/3.5 = 1.71428571429
+
+The t-statistic is 1.71.
+
+Calculate 95% confidence interval = B1 +/- (t)(SEB1)
+
+6 + (1.96)(3.5) = 12.86
+
+6 - (1.96)(3.5) = -0.86
+
+The 95% confidence interval around $\beta_1$ is {-0.86,12.86}.
+
+Calculating the p-value for $\beta_1$
+
+0.9564 —\> 1-.9564 = 0.0436
+
+two-tailed = 0.0436\*2 = 0.0872
+
+The p-value for $\beta_1$ (using a two-tailed test) is 0.0872. Thus, $\beta_1$ is not statistically significant at the 0.05-level with a two-tailed test because the p-value (0.0872) is greater than 0.05.
+
+## Question 2
+
+*Points: 5*
+
+Suppose you estimate an OLS regression and retrieve a $R^2$ value of 0.45. If the Total Sum of Squares (TSS) from that regression equals 4,700, what is the value for the Residual Sum of Squares (RSS)?
+
+$R^2$ = ESS/TSS
+
+TSS = ESS + RSS
+
+0.45 = ESS/4,700
+
+4,700\*0.45 = (ESS/4,700)\*4,700
+
+4,700\*0.45 = ESS
+
+2115 = ESS
+
+4,700 = 2115 + RSS
+
+4,700 - 2115 = (2115 + RSS) - 2115
+
+4,700 - 2115= RSS
+
+2585 = RSS
+
+The value for the Residual Sum of Squares (RSS) is 2,585.
+
+## Question 3
+
+*Points: 5*
+
+Suppose you estimate a bivariate regression with a sample size of 102 and obtain a regression coefficient ($\beta_1$) of 5.0. What is the largest standard error that $\beta_1$ could have and still be statistically significant (i.e., reject the null hypothesis of no relationship) at the 0.05 level with a one-tailed test?
+
+n = 102
+
+$\beta_1$ = 5
+
+df = 102 - k - 1 = 102 - 1 - 1 = 100
+
+1.660 —\> df 100, one-tail 0.05
+
+1.660 = 5/SE
+
+SE\*1.660 = 5/SE\*SE
+
+1.660\*SE = 5
+
+1.660\*SE/1.660 = 5/1.660
+
+SE = 5/1.660 = 3.012048193 or 3.012
+
+The largest the standard error that $\beta_1$ could have and still be statistically significant is 3.012.
+
+## Question 4
+
+*Points: 5*
+
+```{r}
+gapminder_df <- wbstats::wb_data(c("NY.GDP.PCAP.CD", "SP.DYN.LE00.IN"),
+                                 start_date = 2019, end_date = 2019) |> 
+  dplyr::rename(gdp_per_cap = "NY.GDP.PCAP.CD", life_exp = "SP.DYN.LE00.IN")
+```
+
+Using the `gapminder_df` data set read in above, produce a scatterplot of the variables `gdp_per_cap` and `life_exp` (with `life_exp` as the dependent variable on the y-axis). Fit a regression line to the scatterplot. Describe the relationship illustrated. Note any suspected outliers, if any (a visual inspection will suffice for this question).
+
+::: callout-note
+The variable `gdp_per_cap` measures each country's GDP per capita (representing their individual wealth), and `life_exp` indicates the number of years individuals within that country born that year are expected to live (representing their health).
+:::
+
+```{r}
+ggplot(gapminder_df, aes(x = gdp_per_cap, y = life_exp)) +
+    geom_point() +
+    labs(x="GDP per capita",
+         y="Life Expectancy") +
+    geom_smooth(method = "lm", se = F) + 
+    theme_minimal()
+```
+
+The relationship between GDP per capita and life expectancy is not linear as each 50,000 dollar increase in GDP per capita does not produce the same change in years in life expectancy for all datapoints. The majority of data points are clustered around GDPs on the lower end of the plot (below 25,000). Furthermore, the countries with GDPs on the lower end have a range of different average life expectancies, ranging from around 52.91 years to just below 80 years. Additionally, because of the limit to how long humans can feasibly live, there are no countries with average life expectancies above 90 or around 100, causing the data to not follow the regression line but instead plateau around 85 years (at a wide range of GDP per capitas).
+
+However, there is a generally positive relationship in which increases in GDP per capita are associated with increases in life expectancy.
+
+I would suspect that the countries who have an average life expectancy (far) below 60 may be outliers considering their distance from both the regression line of best fit and other datapoints with similar GDP per capitas.
+
+I would also suspect that the country with a GDP per capita between 150,000 and 175,000 dollars is an outlier considering its distance from other points along the regression line. Specifically, countries with a similar life expectancy (around 80 years) have GDP per capitas clustered between 25,000 dollars and 80,000, with all but the one outlier below 125,000.
+
+## Question 5
+
+*Points: 10*
+
+Estimate a bivariate regression with `life_exp` as the dependent variable and `gdp_per_cap` as the independent variable and report the results in a professionally formatted table. In as much detail as possible, describe (and interpret) the regression results.
+
+```{r}
+lifeexp.reg <- lm(life_exp ~ gdp_per_cap, data = gapminder_df)
+summary(lifeexp.reg)
+```
+
+```{r}
+tidy(lifeexp.reg)
+```
+
+```{r}
+modelsummary(lifeexp.reg,
+             coef_rename = c("gdp_per_cap" = "GDP per Capita"),
+             statistic = c("std.error", "p.value"))
+```
+
+|  |  |  |  |  |  |  |
+|----------|----------|--------------|----------|----------|----------|----------|
+|  | **Estimate** | **Standard Error** | **T Value** | **P-Value** | **Confidence Interval (lower bound)** | **Confidence Interval (upper bound)** |
+| **(Intercept)** | 69.591 | 0.503 | 138.46 | 1.38e-200 | 68.6 | 70.6 |
+| **GDP per Capita** | 0.000195 | 0.0000167 | 11.67 | 2.49e- 24 | 0.000162 | 0.000228 |
+
+The intercept suggests that countries with a GDP per capita of 0 would have an average life expectancy of 69.591 years, on average. Furthermore, the coefficient suggests that every one dollar increase in a country's GDP is associated with a 0.000195 increase in life expectancy, on average.
+
+The p-value for the intercept and coefficient for GDP per capita are both less than 0.05, suggesting both the intercept and coefficient are statistically significant. Thus, this means we can reject the null hypothesis of no relationship as it is unlikely one would have observed such a relationship if the null were true. The plot below visualizes the extremely low likelihood of the null being true.
+
+```{r}
+beta_1 <- tidy(lifeexp.reg) |> 
+    filter(term == "gdp_per_cap") |> 
+    pull(estimate)
+se_beta_1 <- tidy(lifeexp.reg) |> 
+    filter(term == "gdp_per_cap") |> 
+    pull(std.error)
+se_beta_1
+beta_1
+no_of_IVs <- 1
+no_of_IVs
+sample_size <- nrow(gapminder_df)
+df <- sample_size - no_of_IVs - 1
+df
+t_stat_95 <- qt(0.025, df = df, lower.tail = F)
+t_stat_95
+lower_ci <- beta_1 - t_stat_95*se_beta_1
+lower_ci
+upper_ci <- beta_1 + t_stat_95*se_beta_1
+upper_ci
+tibble(
+    x = rnorm(1e6, 
+                    mean = tidy(lifeexp.reg) |> filter(term == "gdp_per_cap") |> pull(estimate),
+                    sd = tidy(lifeexp.reg) |> filter(term == "gdp_per_cap") |> pull(std.error))
+    ) |> 
+    ggplot(aes(x = x)) + 
+    stat_slab(aes(fill_ramp = after_stat(x < lower_ci | x > upper_ci))) + 
+    theme_minimal() + 
+    theme(legend.position = "none")
+tibble(
+    x = rnorm(1e6, 
+                    mean = tidy(lifeexp.reg) |> filter(term == "gdp_per_cap") |> pull(estimate),
+                    sd = tidy(lifeexp.reg) |> filter(term == "gdp_per_cap") |> pull(std.error))
+    ) |> 
+    ggplot(aes(x = x)) + 
+    stat_slab(aes(fill_ramp = after_stat(x < lower_ci | x > upper_ci))) + 
+    geom_vline(xintercept = 0) + 
+    theme_minimal() + 
+    theme(legend.position = "none")
+```
