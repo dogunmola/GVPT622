@@ -182,7 +182,7 @@ modelsummary(lifeexp.reg,
 ```
 
 |  |  |  |  |  |  |  |
-|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+|----|----|----|----|----|----|----|
 |  | **Estimate** | **Standard Error** | **T Value** | **P-Value** | **Confidence Interval (lower bound)** | **Confidence Interval (upper bound)** |
 | **(Intercept)** | 69.591 | 0.503 | 138.46 | 1.38e-200 | 68.6 | 70.6 |
 | **GDP per Capita** | 0.000195 | 0.0000167 | 11.67 | 2.49e- 24 | 0.000162 | 0.000228 |

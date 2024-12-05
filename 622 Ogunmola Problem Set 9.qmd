@@ -18,7 +18,7 @@ library(modelsummary)
 library(marginaleffects)
 library(poliscidata)
 library(readr)
-censusAggregate_1 <- read_csv("Downloads/censusAggregate-1.csv")
+censusAggregate_1 <- read_csv("censusAggregate-1.csv")
 View(censusAggregate_1)
 ```
 
@@ -27,6 +27,10 @@ View(censusAggregate_1)
 ## Question 1
 
 *Points: 10*
+
+::: callout-note
+10/10
+:::
 
 Table 1 below reports the results from two regression models. In Model 1 in Table 1 $Y$ is regressed on $X_1$ and, in Model 2, $Y$ is regressed on both $X_1$ and $X_2$. Why might $X_1$ be statistically significant at conventional levels in Model 1 but statistically insignificant in Model 2? Be as specific as possible.
 
@@ -41,6 +45,10 @@ Like the example shown in class, the relationship between $X_1$ and Y in Table 1
 ## Question 2
 
 *Points: 10*
+
+::: callout-note
+8/10
+:::
 
 Using the `censusAggregate` dataset (posted on ELMs), which is survey data aggregated to the state level (1972-2000), estimate a regression with `vote` as the dependent variable and the following independent variables: `nonSouth`, `edr`, and `pcthsg`. Report the results in a professionally formatted table and interpret the regression results.
 
@@ -74,11 +82,33 @@ modelsummary(votereg,
 plot_predictions(votereg, condition = "pcthsg", conf_level = 0.95)
 ```
 
-On average, non-Southern states were associated with a 5.546 point higher voter turnout rate than Southern states. This is statistically significant with a p-value \<0.001. The 95% confidence interval is \[3.978, 7.113\]. As the confidence interval does not include 0, this also provides support for the statistical significance of the findings.
+::: callout-note
+Provide more meaningful axis labels.
+:::
 
-Furthermore, states with election day registration available were associated with 5.792 point increase in voter turnout than states without election day registration, on average. This is statistically significant with a p-value \<0.001. The 95% confidence interval is \[3.715, 7.870\]. As the 95% confidence does not contain 0, that also supports the statistical significance of the findings.
+On average, non-Southern states were associated with a 5.546 point higher voter turnout rate than Southern states.
 
-A one percentage point increase in the percentage of the population in a state that graduated high school was associated with a 0.101 point increase in voter turnout, on average. This is statistically significant at a p-value of 0.006. Furthermore, the confidence interval, \[0.030, 0.172\], does not contain 0, supporting the statistical significance of the findings.
+::: callout-note
+... holding all else constant.
+:::
+
+This is statistically significant with a p-value \<0.001. The 95% confidence interval is \[3.978, 7.113\]. As the confidence interval does not include 0, this also provides support for the statistical significance of the findings.
+
+Furthermore, states with election day registration available were associated with 5.792 point increase in voter turnout than states without election day registration, on average.
+
+::: callout-note
+... holding all else constant.
+:::
+
+This is statistically significant with a p-value \<0.001. The 95% confidence interval is \[3.715, 7.870\]. As the 95% confidence does not contain 0, that also supports the statistical significance of the findings.
+
+A one percentage point increase in the percentage of the population in a state that graduated high school was associated with a 0.101 point increase in voter turnout, on average.
+
+::: callout-note
+... holding all else constant.
+:::
+
+This is statistically significant at a p-value of 0.006. Furthermore, the confidence interval, \[0.030, 0.172\], does not contain 0, supporting the statistical significance of the findings.
 
 The constant term is not meaningful on its own. Though nonSouth and edr could be set to 0 (as they are both binary dummy variables), it is not possible for pcthsg to be set to 0 as there is no way that 0% of a state's population could have graduated from high school (there would be at least some high school graduates). Specifically, in the dataset, the lowest recorded percentage of high school graduates in a state is 46.29%.
 
@@ -86,13 +116,25 @@ The constant term is not meaningful on its own. Though nonSouth and edr could be
 
 *Points: 5*
 
+::: callout-note
+2/5
+:::
+
 Using the regression results from the previous question, evaluate the null hypothesis that the effects (i.e., regression coefficients) of `nonSouth` and `pcthsg` are jointly equal to zero. Can you reject the null hypothesis? Be sure to demonstrate how you reached a definitive conclusion.
+
+::: callout-note
+You need to test whether `nonSouth` and `pcthsg` are jointly ineffectual, not that all variables are.
+:::
 
 Using the regression results from the previous question, the F-test is a useful way to evaluate the null hypothesis that the effects of nonSouth, edr, and pcthsg are jointly equal to 0. The F-statistic is 46.05, and the p-value is \< 2.2e-16. As the p-value associated with the F-statistic is (significantly) less than 0.05, this suggests that it is (highly) unlikely that the coefficients are jointly equal to 0. Thus, we can reject the null hypothesis.
 
 ## Question 4
 
 *Points: 15*
+
+::: callout-note
+12/15
+:::
 
 Using one of the other data sets available in the `poliscidata` package pick one dependent variable and two or more independent variables. Run a regression of the dependent variable on the independent variables. In your answer, describe why you picked the variables you did, produce a professionally formatted results table, and describe your statistical and substantive findings.
 
@@ -110,7 +152,13 @@ For the dependent variable I used the variable "effectiveness" (in the world dat
 
 I decided to pick the variable, effectiveness, as I was curious what domestic political factors influence government effectiveness. Furthermore, as I am interested in international development, I was interested to see if corruption was associated with increased or decreased government effectiveness (on average) as some argue that corruption "sands the wheels" (decreases effectiveness) while others counter that it "greases the wheels" or increases government effectiveness. Lastly, I chose to look at a country's democracy score as I was interested in seeing if democracies or more authoritarian regimes had higher government effectiveness scores (on average) as democracies are often argued to have more effective governments.
 
-A one unit increase in freedom from corruption was associated with a 0.98853 increase in government effectiveness. This is statistically significant at a p-value \<2e-16. Furthermore, the 95% confidence interval \[0.904, 1.073\] does not contain 0, supporting the statistical significance of the results. The substantive findings of the regression output suggest that countries can potentially increase their government effectiveness (by around 1 point) by decreasing corruption (by one point). Though the change seems small, a small change in overall government effectiveness can have substantial and positive effects on a country and its government (bureaucracy). A one unit increase in democracy score is associated with a 0.81243 increase in government effectiveness score, on average. This is not statistically significant as the p-value, 0.0549, is greater than 0.05. Furthermore, the 95% confidence interval \[-0.0171, 1.64\] contains 0. As such, it is not possible to reject the null for the Democracy Score coefficient as it is possible it could equal 0.
+A one unit increase in freedom from corruption was associated with a 0.98853 increase in government effectiveness.
+
+::: callout-note
+... holding all else constant.
+:::
+
+This is statistically significant at a p-value \<2e-16. Furthermore, the 95% confidence interval \[0.904, 1.073\] does not contain 0, supporting the statistical significance of the results. The substantive findings of the regression output suggest that countries can potentially increase their government effectiveness (by around 1 point) by decreasing corruption (by one point). Though the change seems small, a small change in overall government effectiveness can have substantial and positive effects on a country and its government (bureaucracy). A one unit increase in democracy score is associated with a 0.81243 increase in government effectiveness score, on average. This is not statistically significant as the p-value, 0.0549, is greater than 0.05. Furthermore, the 95% confidence interval \[-0.0171, 1.64\] contains 0. As such, it is not possible to reject the null for the Democracy Score coefficient as it is possible it could equal 0.
 
 Based on the findings of the data, a country with limited resources seeking to improve overall government effectiveness (as defined by Kaufmann's scoring) in the present or shorter-term should invest in and prioritize reducing corruption within the government versus democratization (however, that is not to say that democratization should be totally discounted as a potentially longer-term goal).
 
