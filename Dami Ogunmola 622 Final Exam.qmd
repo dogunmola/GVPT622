@@ -176,7 +176,7 @@ $$
 Turnout = 34 + 0.5(Percent\ High\ School\ Graduates) – 5.9(South)
 $$
 
-Based on the following regression equation, the negative coefficient on the South variable could potentially be the result of southern states having a lower proportion of high school graduates than non-southern states, suggesting there may be a relationship between southern states and the proportion of high school graduates in a state.
+Based on the following regression equation, the negative coefficient on the South variable could potentially be the result of southern states having a lower proportion of high school graduates than non-southern states, suggesting there may be a relationship between the two variables.
 
 ## Applied Questions
 
